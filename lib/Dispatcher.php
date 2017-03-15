@@ -49,9 +49,8 @@ class Dispatcher
         if (!empty($uriFragments[1])) {
             $method = $uriFragments[1];
         }
-
         // Den gewünschten Controller laden
-        //   Achtung! Hier stützt PHP ab, sollte der Controller nicht existieren
+        //   Achtung! Hier st�zt PHP ab, sollte der Controller nicht existieren
         require_once "../controller/$controllerName.php";
 
         // Eine neue Instanz des Controllers wird erstellt und die gewünschte
