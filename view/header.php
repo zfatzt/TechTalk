@@ -26,9 +26,9 @@
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
-			<img src="/images/TeckTalkLogoWeiss.png"
-				alt="TechTalkLogo" class="logo">
+
+
+			<img src="/images/TeckTalkLogoWeiss.png" alt="TechTalkLogo"
+				class="logo">
 		</div>
 	</nav>
-
-	<div class="container">

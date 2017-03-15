@@ -1,25 +1,46 @@
 body {
-	padding-top: 200px;
+	
 }
 
 main {
-	margin-left: 50px;
-	margin-right: 50px;
-	background-color: #dfdfdf;
+	margin-left: 3%;
+	margin-right: 3%;
+	background-color: #fff;
 	width: auto;
 }
 
+h3 {
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	font: 20px "Lato", sans-serif;
+	text-align: center;
+	margin: 5px;
+}
+
+footer {
+	background-color: #fff;
+}
+
 .navbar.navbar-inverse.navbar-fixed-top {
-	height: 200px;
+	height: 20%;
 	background-color: #000;
-	margin-left: 45px;
-	margin-right: 45px;
-	padding: 0px;
+	margin-left: 3%;
+	margin-right: 3%;
+	padding: 0;
 }
 
 .parallax {
 	background-image: url("/images/bitcoin.jpg");
-	min-height: 500px;
+	min-height: 800px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.parallax2 {
+	background-image: url("/images/drone.jpg");
+	min-height: 800px;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -27,24 +48,19 @@ main {
 }
 
 .logo {
-	width: 150px;
-	height: 150px;
-	vertical-align: middle;
+	height: auto;
+	width: auto;
+	margin: auto;
+	display: inherit;
+
 }
 
 .textfield {
 	height: auto;
-	background-color: #fff;
+	background-color: #e5e5e5;
 	padding: 50px 80px;
 }
 
-.container {
-	margin: 10px, 0px;
-	padding:
-}
-
-h3 {
-	letter-spacing: 5px;
-	text-transform: uppercase;
-	font: 20px "Lato", sans-serif;
+.center {
+	text-align: center;
 }
