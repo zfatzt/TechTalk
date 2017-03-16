@@ -17,7 +17,6 @@
 <link href="/css/style.css" rel="stylesheet">
 
 </head>
-<main>
 <body>
 	<nav class="navbar navbar-fixed-top navbar-inverse">
 		<div class="container">
@@ -33,14 +32,14 @@
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#"><p>Home</p></a></li>
+					<li class="active"><a href="/"><p>Home</p></a></li>
 					<li><a href="#about"><p>About</p></a></li>
 					<li><a href="#contact"><p>Contact</p></a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">Chats<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Bitcoin</a></li>
+							<li><a href="/chat/bitcoin">Bitcoin</a></li>
 							<li><a href="#">Dronen</a></li>
 							<li><a href="#">Huawei P10</a></li>
 							<li role="separator" class="divider"></li>
@@ -51,7 +50,8 @@
 				
 				</ul>
 			</div>
-			<!-- /.nav-collapse -->
+			
 		</div>
-		<!-- /.container -->
 	</nav>
+	<main>
+	

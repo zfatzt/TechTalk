@@ -1,8 +1,10 @@
 main {
 	margin-left: 3%;
 	margin-right: 3%;
+	margin-top: 70px;
 	background-color: #fff;
 	width: auto;
+	background-color: #fff;
 }
 
 h2 {
@@ -24,7 +26,6 @@ h3 {
 footer {
 	background-color: #fff;
 }
-
 
 .parallax {
 	min-height: 800px;
@@ -66,7 +67,7 @@ footer {
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 body {
-	padding-bottom: 40px;
+	padding-bottom: 10px;
 	color: #5a5a5a;
 }
 
@@ -88,6 +89,10 @@ body {
 	padding-left: 0;
 }
 
+.navbar {
+	margin-bottom: 0;
+}
+
 .navbar-wrapper .navbar {
 	padding-right: 15px;
 	padding-left: 15px;
@@ -96,7 +101,8 @@ body {
 .navbar-wrapper .navbar .container {
 	width: auto;
 }
-.navbar-inverse{
+
+.navbar-inverse {
 	background-color: #000;
 }
 
@@ -106,7 +112,6 @@ body {
 /* Carousel base class */
 .carousel {
 	height: 700px;
-	margin-top: 50px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
