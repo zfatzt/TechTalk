@@ -28,6 +28,7 @@ footer {
 }
 
 .parallax {
+	background-image: url("/images/keyboard.jpg");
 	min-height: 800px;
 	background-attachment: fixed;
 	background-position: center;
