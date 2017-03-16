@@ -19,11 +19,24 @@
 </head>
 <main>
 <body>
+
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
-		
-
-			<img src="/images/TeckTalkLogoWeiss.png" alt="TechTalkLogo"
-				class="logo">
+			<div id="Header">
+				<div id="menue">
+					<img alt="Menu.png" src="/images/Menu.png" />
+					<ul>
+						<li><a class="aktuelleseite" href="default_index.php">Home</a></li>
+						<li><a href="IPhone.html">Anmelden</a></li>
+						<li><a href="IPhone.html">Bitcoin</a></li>
+						<li><a href="IPhone.html">Drone</a></li>
+						<li><a href="IPhone.html">Bitcoin</a></li>
+						<li><a href="Kontakt.html">Kontakt</a></li>
+					</ul>
+				</div>
+				<img src="/images/TeckTalkLogoWeiss.png" alt="TechTalkLogo"
+					class="logo">
+			</div>
 		</div>
+
 	</nav>
