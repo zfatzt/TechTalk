@@ -28,13 +28,13 @@ class UserRepository extends Repository
      *
      * @throws Exception falls das Ausführen des Statements fehlschlägt
      */
-    public function create($benutzerName, $email, $passwort)
+    public function benutzerErstellen($benutzerName, $email, $passwort)
     {
         $passwort = sha1($passwort);
 
-        $query = "INSERT INTO $this->kunde (benutzerName, email, passwort) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO $this->kunde (benutzerName, email, passwort) VALUES (?, ?, ?)";
 
-        $statement = ConnectionHandler::getConnection()->prepare($query);
+        $statement = ConnectionHandler::getConnection()->prepare($sql);
         $statement->bind_param('ssss', $benutzerName, $email, $passwort);
 
         if (!$statement->execute()) {
@@ -43,4 +43,28 @@ class UserRepository extends Repository
 
         return $statement->insert_id;
     }
+    
+    public function anmelden($email, $passwort){
+    	
+    	$sql = "SELECT techtalk.kunde.email, techtalk.kunde.passwort, techtalk.kunde.benutzerName FROM techtalk.kunde where email=? and passwort=?";
+    	
+    	$statement = ConnectionHandler::getConnection()->prepare($sql);
+    	
+    	$statement->bind_param('ss', $email, $passwort);
+    	
+    	$statement->execute();
+    	$result = $statement->get_result();
+    	
+    	
+    	if (mysqli_num_rows($result) >0) {
+    		echo "Sie sind nun eingeloggt";
+    	}else{
+    		echo "Email oder Passwort ist falsch oder existiert noch nicht. Bitte registrieren Sie sich.";
+    	}
+    	if (!$statement->execute()){
+    		throw new Exception($statement->error);
+    		
+    	}
+    }
 }
+?>

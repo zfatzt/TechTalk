@@ -20,7 +20,8 @@ class UserController {
 		$view->heading = 'Benutzer erstellen';
 		$view->display ();
 	}
-	public function doCreate() {
+	
+	public function benutzerErstellen() {
 		if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 			if ($_POST ['send']) {
 				$benutzerName = $_POST ['benutzerName'];
@@ -50,7 +51,8 @@ class UserController {
 		
 		// Anfrage an die URI /user weiterleiten (HTTP 302)
 		header ( 'Location: /user' );
-	}
+	}	
+	
 	public function delete() {
 		$userRepository = new UserRepository ();
 		$userRepository->deleteById ( $_GET ['id'] );
