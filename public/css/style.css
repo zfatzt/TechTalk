@@ -35,8 +35,8 @@ footer {
 }
 
 .parallax2 {
-	background-image: url("/images/drone.jpg");
-	min-height: 800px;
+	background-image: url("/images/macbook.jpg");
+	min-height: 500px;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
