@@ -25,13 +25,6 @@ footer {
 	background-color: #fff;
 }
 
-.navbar.navbar-inverse.navbar-fixed-top {
-	height: 20%;
-	background-color: #000000;
-	margin-left: 3%;
-	margin-right: 3%;
-	padding: 0;
-}
 
 .parallax {
 	min-height: 800px;
@@ -69,57 +62,6 @@ footer {
 	text-align: center;
 }
 
-li {
-	width: 150px;
-}
-
-#menue {
-	position: absolute;
-	bottom: -6px;
-	left: 0px;
-	letter-spacing: 5px;
-	text-transform: uppercase;
-	font: 10px "Lato", sans-serif;
-	text-align: center;
-	margin: 5px;
-}
-
-#menue:hover ul {
-	display: block;
-}
-
-#menue ul {
-	display: none;
-	position: absolute;
-	list-style-type: none;
-	margin: auto;
-	padding: 0;
-	overflow: hidden;
-	background-color: #333;
-	color: #000;
-	font-family: Lato, sans-serif;
-}
-
-#menue li {
-	float: left;
-}
-
-#menue li a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 20px 16px;
-	text-decoration: none;
-}
-
-#menue li a:hover {
-	background-color: #111;
-}
-
-.aktuelleseite {
-	background-color: #676767;
-}
-
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
@@ -154,6 +96,9 @@ body {
 .navbar-wrapper .navbar .container {
 	width: auto;
 }
+.navbar-inverse{
+	background-color: #000;
+}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -161,7 +106,7 @@ body {
 /* Carousel base class */
 .carousel {
 	height: 700px;
-	margin-top: 10%;
+	margin-top: 50px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -213,41 +158,48 @@ body {
 	letter-spacing: -1px;
 }
 
-/* RESPONSIVE CSS
--------------------------------------------------- */
-@media ( min-width : 768px) {
-	/* Navbar positioning foo */
-	.navbar-wrapper {
-		margin-top: 20px;
-	}
-	.navbar-wrapper .container {
-		padding-right: 15px;
-		padding-left: 15px;
-	}
-	.navbar-wrapper .navbar {
-		padding-right: 0;
-		padding-left: 0;
-	}
-
-	/* The navbar becomes detached from the top, so we round the corners */
-	.navbar-wrapper .navbar {
-		border-radius: 4px;
-	}
-
-	/* Bump up size of carousel content */
-	.carousel-caption p {
-		margin-bottom: 20px;
-		font-size: 21px;
-		line-height: 1.4;
-	}
-	.featurette-heading {
-		font-size: 50px;
-	}
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+html, body {
+	overflow-x: hidden; /* Prevent scroll on narrow devices */
 }
 
-@media ( min-width : 992px) {
-	.featurette-heading {
-		margin-top: 120px;
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 767px) {
+	.row-offcanvas {
+		position: relative;
+		-webkit-transition: all .25s ease-out;
+		-o-transition: all .25s ease-out;
+		transition: all .25s ease-out;
 	}
-}
+	.row-offcanvas-right {
+		right: 0;
+	}
+	.row-offcanvas-left {
+		left: 0;
+	}
+	.row-offcanvas-right
+  .sidebar-offcanvas {
+		right: -50%; /* 6 columns */
+	}
+	.row-offcanvas-left
+  .sidebar-offcanvas {
+		left: -50%; /* 6 columns */
+	}
+	.row-offcanvas-right.active {
+		right: 50%; /* 6 columns */
+	}
+	.row-offcanvas-left.active {
+		left: 50%; /* 6 columns */
+	}
+	.sidebar-offcanvas {
+		position: absolute;
+		top: 0;
+		width: 50%; /* 6 columns */
+	}
 }

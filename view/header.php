@@ -19,24 +19,39 @@
 </head>
 <main>
 <body>
-
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<nav class="navbar navbar-fixed-top navbar-inverse">
 		<div class="container">
-			<div id="Header">
-				<div id="menue">
-					<img alt="Menu.png" src="/images/Menu.png" />
-					<ul>
-						<li><a class="aktuelleseite" href="default_index.php">Home</a></li>
-						<li><a href="IPhone.html">Anmelden</a></li>
-						<li><a href="IPhone.html">Bitcoin</a></li>
-						<li><a href="IPhone.html">Drone</a></li>
-						<li><a href="IPhone.html">Bitcoin</a></li>
-						<li><a href="Kontakt.html">Kontakt</a></li>
-					</ul>
-				</div>
-				<img src="/images/TeckTalkLogoWeiss.png" alt="TechTalkLogo"
-					class="logo">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><h2>Tech Talk</h2></a>
 			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#"><p>Home</p></a></li>
+					<li><a href="#about"><p>About</p></a></li>
+					<li><a href="#contact"><p>Contact</p></a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false">Chats<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Bitcoin</a></li>
+							<li><a href="#">Dronen</a></li>
+							<li><a href="#">Huawei P10</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-header">Admin</li>
+							<li><a href="#">Admin Chat</a></li>
+							<li><a href="#">Support</a></li>
+						</ul>
+				
+				</ul>
+			</div>
+			<!-- /.nav-collapse -->
 		</div>
-
+		<!-- /.container -->
 	</nav>
