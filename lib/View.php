@@ -55,7 +55,7 @@
  */
 class View
 {
-    private $viewfile;
+    private $viewfile; 
 
     private $properties = array();
 

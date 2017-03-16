@@ -131,26 +131,27 @@ class Repository
      *
      * @return Ein array mit den gefundenen Datensätzen.
      */
-    public function readAll($max = 100)
-    {
-        $query = "SELECT * FROM {$this->kunde} LIMIT 0, $max";
+//     public function readAll($max = 100)
+//     {
+//         $query = "SELECT * FROM techtalk.kunde LIMIT 0, 100";
+        
+//         $statement = ConnectionHandler::getConnection()->prepare($query);
+        
+//         $statement->execute();
 
-        $statement = ConnectionHandler::getConnection()->prepare($query);
-        $statement->execute();
+//         $result = $statement->get_result();
+//         if (!$result) {
+//             throw new Exception($statement->error);
+//         }
 
-        $result = $statement->get_result();
-        if (!$result) {
-            throw new Exception($statement->error);
-        }
+//         // Datensätze aus dem Resultat holen und in das Array $rows speichern
+//         $rows = array();
+//         while ($row = $result->fetch_object()) {
+//             $rows[] = $row;
+//         }
 
-        // Datensätze aus dem Resultat holen und in das Array $rows speichern
-        $rows = array();
-        while ($row = $result->fetch_object()) {
-            $rows[] = $row;
-        }
-
-        return $rows;
-    }
+//         return $rows;
+//     }
 
     /**
      * Diese Funktion löscht den Datensatz mit der gegebenen id.
