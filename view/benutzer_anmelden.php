@@ -6,7 +6,7 @@
 </div>
 <!-- Modal -->
 <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1"
-	role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true"> 
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<br>
@@ -19,18 +19,16 @@
 			<div class="modal-body">
 				<div id="myTabContent" class="tab-content">
 					<div class="tab-pane fade active in" id="signin">
-						<form class="form-horizontal" method="post"
-							action="/ueberpruefung/anmelden">
+						<form class="form-horizontal" method="post" action="/ueberpruefung/anmelden">
 							<fieldset>
 								<!-- Sign In Form -->
 								<!-- Text input-->
 								<div class="control-group">
 									<label class="control-label" for="anmeldeEmail">Email:</label>
 									<div class="controls">
-										<input required="" id="anmeldeEmail" name="anmeldeEmail"
-											type="email" class="form-control"
-											placeholder="max@mustermann.ch" class="input-medium"
-											required="">
+										<input required="" id="anmeldeEmail" name="anmeldeEmail" type="email"
+											class="form-control" placeholder="max@mustermann.ch"
+											class="input-medium" required="">
 									</div>
 								</div>
 
@@ -59,20 +57,18 @@
 								<div class="control-group">
 									<label class="control-label" for="signin"></label>
 									<div class="controls">
-										<button id="signin" type="submit" name="signin"
-											class="btn btn-success">Einloggen</button>
+										<button id="signin" type="submit" name="signin" class="btn btn-success">Einloggen
+										</button>
 									</div>
 								</div>
 							</fieldset>
 						</form>
 					</div>
-
-
-
-					<div class="tab-pane fade" id="signup">
-						<!-- registrieren -->
-						<form class="form-horizontal" method="post"
-							action="/ueberpruefung/registrieren">
+					
+					
+					
+					<div class="tab-pane fade" id="signup"> <!-- registrieren -->
+						<form class="form-horizontal" method="post" action="/ueberpruefung/registrieren">
 							<fieldset>
 								<!-- Sign Up Form -->
 								<!-- Text input-->
@@ -89,9 +85,9 @@
 								<div class="control-group">
 									<label class="control-label" for="benutzername">Benutzername:</label>
 									<div class="controls">
-										<input id="benutzername" name="benutzername"
-											class="form-control" type="text" placeholder="Max457"
-											class="input-large" required="">
+										<input id="benutzername" name="benutzername" class="form-control"
+											type="text" placeholder="Max457" class="input-large"
+											required="">
 									</div>
 								</div>
 

@@ -218,17 +218,6 @@ html, body {
 	}
 }
 
-.eingabeNachricht {
-	position: absolute;
-	height: auto;
-	left: 25%;
-	z-index: 800;
-	opacity: 1;
-}
-
-.modal-content {
+.modal-content{
 	width: 300px;
-}
-:focus {
-    outline: 0;
 }
