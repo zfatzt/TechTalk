@@ -111,6 +111,10 @@ label.checkbox {
 	background-color: #000;
 }
 
+a:focus {
+	outline: none;
+}
+
 /* CAROUSEL
 -------------------------------------------------- */
 

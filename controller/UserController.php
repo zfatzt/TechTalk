@@ -23,7 +23,7 @@ class UserController {
 	}
 	public function anmelden() {
 		$view = new View ( 'benutzer_anmelden' );
-		$view->title = 'Startseite';
+		$view->title = 'Anmeldung';
 		$view->heading = 'Startseite';
 		$view->display ();
 	}

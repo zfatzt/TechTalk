@@ -1,6 +1,6 @@
 <!-- Modal -->
- <div class="modal show  bs-modal-sm" id="myModal" tabindex="-1"
-	role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1"
+	role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true"> 
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<br>
@@ -25,7 +25,6 @@
 											class="input-medium" required="">
 									</div>
 								</div>
-
 								<!-- Password input-->
 								<div class="control-group">
 									<label class="control-label" for="passwordinput">Passwort:</label>
@@ -62,7 +61,7 @@
 					
 					
 					<div class="tab-pane fade" id="signup"> <!-- registrieren -->
-						<form class="form-horizontal" method="post" action="/ueberpruefung/registrieren">
+						<form onsubmit="myFunction()" class="form-horizontal" method="post" action="/ueberpruefung/registrieren">
 							<fieldset>
 								<!-- Sign Up Form -->
 								<!-- Text input-->
@@ -76,6 +75,7 @@
 								</div>
 
 								<!-- Text input-->
+							<div id=signinForm>
 								<div class="control-group">
 									<label class="control-label" for="benutzername">Benutzername:</label>
 									<div class="controls">
@@ -84,14 +84,15 @@
 											required="">
 									</div>
 								</div>
+								
+								
 
 								<!-- Password input-->
 								<div class="control-group">
 									<label class="control-label" for="password">Passwort:</label>
 									<div class="controls">
 										<input id="password" name="password" class="form-control"
-											type="password" placeholder="********" class="input-large"
-											required=""> <em>1-8 Characters</em>
+											type="password" placeholder="********" class="input-large"> <em>1-8 Characters</em>
 									</div>
 								</div>
 
@@ -105,7 +106,7 @@
 											class="input-large" required="">
 									</div>
 								</div>
-
+							</div>	
 								<!-- Multiple Radios (inline) -->
 								<br>
 								<div class="control-group">
@@ -124,7 +125,7 @@
 								<div class="control-group">
 									<label class="control-label" for="confirmsignup"></label>
 									<div class="controls">
-										<button id="confirmsignup" name="confirmsignup" type="submit"
+										<input type="button" value="Submit" id="confirmsignup" name="confirmsignup"
 											class="btn btn-success">Registrieren</button>
 									</div>
 								</div>
@@ -141,11 +142,72 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript">
-    $(window).load(function(){
-        $('#myModal').modal('show');
-    });
+
+<script>
+function myFunction() {
+
+	var reenterpassword = document.getElementById(reenterpassword);
+	var password  = document.getElementById(password);
+
+	if (reenterpassword.value == password.value)
+	{
+		alert("1");
+		return true;
+	}
+	else
+	{
+		alert("2");
+		// Display error div (set visiblity)
+		 return false;
+	}
+	
+    
+   
+}
 </script>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+    $('#signinForm').formValidation({
+        // I am validating Bootstrap form
+        framework: 'bootstrap',
+
+        // Feedback icons
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+
+        // List of fields and their validation rules
+        fields: {
+        	benutzername: {
+                validators: {
+                    notEmpty: {
+                        message: 'The username is required and cannot be empty'
+                    },
+                    stringLength: {
+                        min: 6,
+                        max: 30,
+                        message: 'The username must be more than 6 and less than 30 characters long'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z0-9_]+$/,
+                        message: 'The username can only consist of alphabetical, number and underscore'
+                    }
+                }
+            },
+            password: {
+                validators: {
+                    notEmpty: {
+                        message: 'The password is required and cannot be empty'
+                    }
+                }
+            }
+        }
+    });
+});
+</script>
 </body>
 </html>
