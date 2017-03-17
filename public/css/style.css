@@ -7,6 +7,11 @@ main {
 	background-color: #fff;
 }
 
+body {
+	padding-bottom: 10px;
+	color: #5a5a5a;
+}
+
 h2 {
 	letter-spacing: 5px;
 	text-transform: uppercase;
@@ -25,6 +30,10 @@ h3 {
 
 footer {
 	background-color: #fff;
+}
+
+label.checkbox {
+	margin-left: 20px;
 }
 
 .modal-dialog {
@@ -49,35 +58,22 @@ footer {
 	background-size: cover;
 }
 
-.logo {
+.eingabeNachricht {
 	position: absolute;
-	width: 11%;
 	height: auto;
-	left: 45%;
+	left: 25%;
 	z-index: 800;
 	opacity: 1;
 }
 
-label.checkbox {
-	margin-left: 20px;
+.modal-content {
+	width: 300px;
 }
 
 .textfield {
 	height: auto;
 	background-color: #e5e5e5;
 	padding: 50px 80px;
-}
-
-.center {
-	text-align: center;
-}
-
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
-body {
-	padding-bottom: 10px;
-	color: #5a5a5a;
 }
 
 /* CUSTOMIZE THE NAVBAR
@@ -216,8 +212,4 @@ html, body {
 		top: 0;
 		width: 50%; /* 6 columns */
 	}
-}
-
-.modal-content{
-	width: 300px;
 }

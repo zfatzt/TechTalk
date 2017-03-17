@@ -19,18 +19,16 @@
 			<div class="modal-body">
 				<div id="myTabContent" class="tab-content">
 					<div class="tab-pane fade active in" id="signin">
-						<form class="form-horizontal" method="post"
-							action="/ueberpruefung/anmelden">
+						<form class="form-horizontal">
 							<fieldset>
 								<!-- Sign In Form -->
 								<!-- Text input-->
 								<div class="control-group">
-									<label class="control-label" for="anmeldeEmail">Email:</label>
+									<label class="control-label" for="userid">Email:</label>
 									<div class="controls">
-										<input required="" id="anmeldeEmail" name="anmeldeEmail"
-											type="email" class="form-control"
-											placeholder="max@mustermann.ch" class="input-medium"
-											required="">
+										<input required="" id="userid" name="userid" type="text"
+											class="form-control" placeholder="max@mustermann.ch"
+											class="input-medium" required="">
 									</div>
 								</div>
 
@@ -38,7 +36,7 @@
 								<div class="control-group">
 									<label class="control-label" for="passwordinput">Passwort:</label>
 									<div class="controls">
-										<input required="" id="anmeldePasswort" name="anmeldePasswort"
+										<input required="" id="passwordinput" name="passwordinput"
 											class="form-control" type="password" placeholder="********"
 											class="input-medium">
 									</div>
@@ -46,7 +44,7 @@
 
 								<!-- Multiple Checkboxes (inline) -->
 								<div class="control-group">
-									<label class="checkbox" for="rememberme"></label>
+									<label class="control-label" for="rememberme"></label>
 									<div class="controls">
 										<label class="checkbox" for="rememberme-0"> <input
 											type="checkbox" name="rememberme" id="rememberme-0"
@@ -59,39 +57,34 @@
 								<div class="control-group">
 									<label class="control-label" for="signin"></label>
 									<div class="controls">
-										<button id="signin" type="submit" name="signin"
-											class="btn btn-success">Einloggen</button>
+										<button id="signin" name="signin" class="btn btn-success">Einloggen
+										</button>
 									</div>
 								</div>
 							</fieldset>
 						</form>
 					</div>
-
-
-
 					<div class="tab-pane fade" id="signup">
-						<!-- registrieren -->
-						<form class="form-horizontal" method="post"
-							action="/ueberpruefung/registrieren">
+						<form class="form-horizontal">
 							<fieldset>
 								<!-- Sign Up Form -->
 								<!-- Text input-->
 								<div class="control-group">
-									<label class="control-label" for="email">Email:</label>
+									<label class="control-label" for="Email">Email:</label>
 									<div class="controls">
-										<input id="email" name="email" class="form-control"
-											type="email" placeholder="max@mustermann.ch"
+										<input id="Email" name="Email" class="form-control"
+											type="text" placeholder="max@mustermann.ch"
 											class="input-large" required="">
 									</div>
 								</div>
 
 								<!-- Text input-->
 								<div class="control-group">
-									<label class="control-label" for="benutzername">Benutzername:</label>
+									<label class="control-label" for="userid">Benutzername:</label>
 									<div class="controls">
-										<input id="benutzername" name="benutzername"
-											class="form-control" type="text" placeholder="Max457"
-											class="input-large" required="">
+										<input id="userid" name="userid" class="form-control"
+											type="text" placeholder="Max457" class="input-large"
+											required="">
 									</div>
 								</div>
 
@@ -134,7 +127,7 @@
 								<div class="control-group">
 									<label class="control-label" for="confirmsignup"></label>
 									<div class="controls">
-										<button id="confirmsignup" name="confirmsignup" type="submit"
+										<button id="confirmsignup" name="confirmsignup"
 											class="btn btn-success">Registrieren</button>
 									</div>
 								</div>
