@@ -229,3 +229,6 @@ html, body {
 .modal-content {
 	width: 300px;
 }
+:focus {
+    outline: 0;
+}

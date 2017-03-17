@@ -160,7 +160,8 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> 
+
 <body>
 	<nav class="navbar navbar-fixed-top navbar-inverse">
 		<div class="container">
