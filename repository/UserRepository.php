@@ -31,19 +31,27 @@ class UserRepository extends Repository
     	
     	$statement = ConnectionHandler::getConnection()->prepare($sql);
     	
+    	$passwort = sha1($passwort);
+    	
     	$statement->bind_param('ss', $email, $passwort);
     	
     	$statement->execute();
     	$result = $statement->get_result();
     	
-    	$loginResult = new LoginResult();
     	
     	if (!$statement->execute()){
     		throw new Exception($statement->error);
     	}
     	
-    	return $loginResult;
-    
+    	$row = $result->fetch_assoc();
+    	$benutzername = $row["benutzername"];
+    	
+    	$loginResult = new LoginResult();
+    	$loginResult->setBenutzerExistiert(true);
+    	$loginResult->setBenutzerKannEinloggen(true);
+    	$loginResult->setBenutzername($benutzername);
+		return $loginResult;
+    	
     }
 }
 ?>
