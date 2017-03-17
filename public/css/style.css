@@ -27,9 +27,13 @@ footer {
 	background-color: #fff;
 }
 
+.modal-dialog {
+	width: 200px;
+}
+
 .parallax {
 	background-image: url("/images/keyboard.jpg");
-	min-height: 800px;
+	min-height: 500px;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -52,6 +56,10 @@ footer {
 	left: 45%;
 	z-index: 800;
 	opacity: 1;
+}
+
+label.checkbox {
+	margin-left: 20px;
 }
 
 .textfield {
@@ -208,4 +216,8 @@ html, body {
 		top: 0;
 		width: 50%; /* 6 columns */
 	}
+}
+
+.modal-content{
+	width: 300px;
 }

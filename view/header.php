@@ -33,7 +33,7 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="/"><p>Home</p></a></li>
-					<li><a href="#about"><p>About</p></a></li>
+					<li><a href="/login/anmelden"><p>Login</p></a></li>
 					<li><a href="#contact"><p>Contact</p></a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
