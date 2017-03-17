@@ -76,7 +76,7 @@ label.checkbox {
 	padding: 50px 80px;
 }
 
-/* CUSTOMIZE THE NAVBAR
+/* NAVBAR
 -------------------------------------------------- */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
@@ -111,7 +111,7 @@ label.checkbox {
 	background-color: #000;
 }
 
-/* CUSTOMIZE THE CAROUSEL
+/* CAROUSEL
 -------------------------------------------------- */
 
 /* Carousel base class */
@@ -135,81 +135,4 @@ label.checkbox {
 	left: 0;
 	min-width: 100%;
 	height: auto;
-}
-
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-	margin-bottom: 20px;
-	text-align: center;
-}
-
-.marketing h2 {
-	font-weight: normal;
-}
-
-.marketing .col-lg-4 p {
-	margin-right: 10px;
-	margin-left: 10px;
-}
-
-/* Featurettes
-------------------------- */
-.featurette-divider {
-	margin: 80px 0; /* Space out the Bootstrap <hr> more */
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-	font-weight: 300;
-	line-height: 1;
-	letter-spacing: -1px;
-}
-
-/*
- * Style tweaks
- * --------------------------------------------------
- */
-html, body {
-	overflow-x: hidden; /* Prevent scroll on narrow devices */
-}
-
-/*
- * Off Canvas
- * --------------------------------------------------
- */
-@media screen and (max-width: 767px) {
-	.row-offcanvas {
-		position: relative;
-		-webkit-transition: all .25s ease-out;
-		-o-transition: all .25s ease-out;
-		transition: all .25s ease-out;
-	}
-	.row-offcanvas-right {
-		right: 0;
-	}
-	.row-offcanvas-left {
-		left: 0;
-	}
-	.row-offcanvas-right
-  .sidebar-offcanvas {
-		right: -50%; /* 6 columns */
-	}
-	.row-offcanvas-left
-  .sidebar-offcanvas {
-		left: -50%; /* 6 columns */
-	}
-	.row-offcanvas-right.active {
-		right: 50%; /* 6 columns */
-	}
-	.row-offcanvas-left.active {
-		left: 50%; /* 6 columns */
-	}
-	.sidebar-offcanvas {
-		position: absolute;
-		top: 0;
-		width: 50%; /* 6 columns */
-	}
 }

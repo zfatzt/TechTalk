@@ -1,7 +1,9 @@
 
 <hr>
 <footer>
-	<p class="center">&copy; Laurent Mouchart & Tobias Fatzer 2017</p>
+	<center>
+		<p>&copy; Laurent Mouchart & Tobias Fatzer 2017</p>
+	</center>
 </footer>
 
 
