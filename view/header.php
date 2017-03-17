@@ -33,7 +33,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="/"><p>Home</p></a></li>
-					<li><a href="/user/anmelden"><p>Login</p></a></li>
+					<li><a href="#signup"
+		data-toggle="modal" data-target=".bs-modal-sm"><p>Login</p></a></li>
 					<li><a href="#contact"><p>Contact</p></a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"

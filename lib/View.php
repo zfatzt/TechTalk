@@ -83,6 +83,7 @@ class View
         extract($this->properties);
 
         require './../view/header.php';
+        require './../view/benutzer_anmelden.php';
         require $this->viewfile;
         require './../view/footer.php';
     }

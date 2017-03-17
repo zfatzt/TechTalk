@@ -1,9 +1,3 @@
-<div class="container">
-	<br>
-	<button class="btn btn-primary btn-lg" href="#signup"
-		data-toggle="modal" data-target=".bs-modal-sm">Anmelden/Registrieren</button>
-	<br>
-</div>
 <!-- Modal -->
 <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1"
 	role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true"> 
