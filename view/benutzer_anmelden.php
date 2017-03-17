@@ -6,7 +6,7 @@
 </div>
 <!-- Modal -->
 <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1"
-	role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true"> 
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<br>
