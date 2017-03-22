@@ -8,14 +8,14 @@ class UeberpruefungController {
 			if (empty ( $_POST ["anmeldeEmail"] )) {
 				$emailErr = "Bitte geben Sie eine E-Mail Adresse ein!";
 			} else {
-				$email = ($_POST ["anmeldeEmail"]);
+				$email = htmlspecialchars($_POST ["anmeldeEmail"]);
 				// check if e-mail address is well-formed
 				if (! filter_var ( $email, FILTER_VALIDATE_EMAIL )) {
 					$emailErr = "Bitte geben Sie eine gueltige E-Mail Adresse ein!";
 				}
 			}
 			
-			$passwort = $_POST ['anmeldePasswort'];
+			$passwort = htmlspecialchars($_POST ['anmeldePasswort']);
 			if (empty ( $passwort )) {
 				$passwortErr = "Bitte geben Sie ein Passwort ein!";
 			}

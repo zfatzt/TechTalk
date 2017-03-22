@@ -1,6 +1,6 @@
 <!-- Modal -->
 <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1"
-	role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true"> 
+	role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<br>
@@ -13,16 +13,18 @@
 			<div class="modal-body">
 				<div id="myTabContent" class="tab-content">
 					<div class="tab-pane fade active in" id="signin">
-						<form class="form-horizontal" method="post" action="/ueberpruefung/anmelden">
+						<form class="form-horizontal" method="post"
+							action="/ueberpruefung/anmelden">
 							<fieldset>
 								<!-- Sign In Form -->
 								<!-- Text input-->
 								<div class="control-group">
 									<label class="control-label" for="anmeldeEmail">Email:</label>
 									<div class="controls">
-										<input required="" id="anmeldeEmail" name="anmeldeEmail" type="email"
-											class="form-control" placeholder="max@mustermann.ch"
-											class="input-medium" required="">
+										<input required="" id="anmeldeEmail" name="anmeldeEmail"
+											type="email" class="form-control"
+											placeholder="max@mustermann.ch" class="input-medium"
+											required="">
 									</div>
 								</div>
 								<!-- Password input-->
@@ -50,18 +52,20 @@
 								<div class="control-group">
 									<label class="control-label" for="signin"></label>
 									<div class="controls">
-										<button id="signin" type="submit" name="signin" class="btn btn-success">Einloggen
-										</button>
+										<button id="signin" type="submit" name="signin"
+											class="btn btn-success">Einloggen</button>
 									</div>
 								</div>
 							</fieldset>
 						</form>
 					</div>
-					
-					
-					
-					<div class="tab-pane fade" id="signup"> <!-- registrieren -->
-						<form onsubmit="myFunction()" class="form-horizontal" method="post" action="/ueberpruefung/registrieren">
+
+
+
+					<div class="tab-pane fade" id="signup">
+						<!-- registrieren -->
+						<form onsubmit="myFunction()" class="form-horizontal"
+							method="post" action="/ueberpruefung/registrieren">
 							<fieldset>
 								<!-- Sign Up Form -->
 								<!-- Text input-->
@@ -70,43 +74,45 @@
 									<div class="controls">
 										<input id="email" name="email" class="form-control"
 											type="email" placeholder="max@mustermann.ch"
-											class="input-large" required="">
+											class="input-large" required="" onkeyup="ueberpruefung()">
 									</div>
 								</div>
 
 								<!-- Text input-->
-							<div id=signinForm>
-								<div class="control-group">
-									<label class="control-label" for="benutzername">Benutzername:</label>
-									<div class="controls">
-										<input id="benutzername" name="benutzername" class="form-control"
-											type="text" placeholder="Max457" class="input-large"
-											required="">
+								<div id=signinForm>
+									<div class="control-group">
+										<label class="control-label" for="benutzername">Benutzername:</label>
+										<div class="controls">
+											<input id="benutzername" name="benutzername"
+												class="form-control" type="text" placeholder="Max457"
+												class="input-large" required="" onkeyup="ueberpruefung()">
+										</div>
 									</div>
-								</div>
-								
-								
 
-								<!-- Password input-->
-								<div class="control-group">
-									<label class="control-label" for="password">Passwort:</label>
-									<div class="controls">
-										<input id="password" name="password" class="form-control"
-											type="password" placeholder="********" class="input-large"> <em>1-8 Characters</em>
-									</div>
-								</div>
 
-								<!-- Text input-->
-								<div class="control-group">
-									<label class="control-label" for="reenterpassword"> Passwort
-										wiederholen:</label>
-									<div class="controls">
-										<input id="reenterpassword" class="form-control"
-											name="reenterpassword" type="password" placeholder="********"
-											class="input-large" required="">
+
+									<!-- Password input-->
+									<div class="control-group">
+										<label class="control-label" for="password">Passwort:</label>
+										<div class="controls">
+											<input id="password" name="password" class="form-control"
+												type="password" placeholder="********" class="input-large"
+												onkeyup="ueberpruefung()"> <em>1-8 Characters</em>
+										</div>
+									</div>
+
+									<!-- Text input-->
+									<div class="control-group">
+										<label class="control-label" for="reenterpassword"
+											onkeyup="ueberpruefung()"> Passwort wiederholen:</label>
+										<div class="controls">
+											<input id="reenterpassword" class="form-control"
+												name="reenterpassword" type="password"
+												placeholder="********" class="input-large" required=""
+												onkeyup="ueberpruefung()">
+										</div>
 									</div>
 								</div>
-							</div>	
 								<!-- Multiple Radios (inline) -->
 								<br>
 								<div class="control-group">
@@ -125,8 +131,10 @@
 								<div class="control-group">
 									<label class="control-label" for="confirmsignup"></label>
 									<div class="controls">
-										<input type="button" value="Registrieren" id="confirmsignup" name="confirmsignup"
-											class="btn btn-success"></button>
+									<span id="warnung"></span>
+										<input type="button" value="Registrieren" id="confirmsignup"
+											name="confirmsignup" class="btn btn-success">
+										</button>
 									</div>
 								</div>
 							</fieldset>
@@ -142,72 +150,27 @@
 		</div>
 	</div>
 </div>
-
 <script>
-function myFunction() {
-
-	var reenterpassword = document.getElementById(reenterpassword);
-	var password  = document.getElementById(password);
-
-	if (reenterpassword.value == password.value)
-	{
-		alert("1");
-		return true;
-	}
-	else
-	{
-		alert("2");
-		// Display error div (set visiblity)
-		 return false;
-	}
+function ueberpruefung() {
+	document.getElementById("warnung").innerHTML = "";
+	var name = document.getElementById("benutzername").value;
+	var email = document.getElementById("email").value; 
+	var password1 = document.getElementById("password").value;
+	var password2 = document.getElementById("reenterpassword").value;
 	
-    
-   
+	if(name.length < 2) {
+		document.getElementById("warnung").innerHTML = "Name ist zu kurz <br/>";
+	}
+	if(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email) == false) {
+		document.getElementById("warnung").innerHTML = document.getElementById("warnung").innerHTML + "E-Mail Adresse ist ungültig!<br/>";
+	}
+	if(password1 != password2 && password1 != false) {
+		document.getElementById("warnung").innerHTML = document.getElementById("warnung").innerHTML + "Passw&ouml;rter stimmen nicht überein!<br/>";
+	}
+	if(password1.length < 8) {
+		document.getElementById("warnung").innerHTML = document.getElementById("warnung").innerHTML + "Passwort muss mindestens 8 Zeichen lang sein!<br/>";
+	}
 }
-</script>
-
-<script type="text/javascript">
-
-$(document).ready(function() {
-    $('#signinForm').formValidation({
-        // I am validating Bootstrap form
-        framework: 'bootstrap',
-
-        // Feedback icons
-        icon: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
-        },
-
-        // List of fields and their validation rules
-        fields: {
-        	benutzername: {
-                validators: {
-                    notEmpty: {
-                        message: 'The username is required and cannot be empty'
-                    },
-                    stringLength: {
-                        min: 6,
-                        max: 30,
-                        message: 'The username must be more than 6 and less than 30 characters long'
-                    },
-                    regexp: {
-                        regexp: /^[a-zA-Z0-9_]+$/,
-                        message: 'The username can only consist of alphabetical, number and underscore'
-                    }
-                }
-            },
-            password: {
-                validators: {
-                    notEmpty: {
-                        message: 'The password is required and cannot be empty'
-                    }
-                }
-            }
-        }
-    });
-});
 </script>
 </body>
 </html>
