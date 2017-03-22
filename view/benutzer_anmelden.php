@@ -132,7 +132,7 @@
 									<label class="control-label" for="confirmsignup"></label>
 									<div class="controls">
 									<span id="warnung"></span>
-										<input type="button" value="Registrieren" id="confirmsignup"
+										<input type="submit" value="Registrieren" id="confirmsignup"
 											name="confirmsignup" class="btn btn-success">
 										</button>
 									</div>
@@ -151,7 +151,7 @@
 	</div>
 </div>
 <script>
-function ueberpruefung() {
+function ueberpruefungEMail() {
 	document.getElementById("warnung").innerHTML = "";
 	var name = document.getElementById("benutzername").value;
 	var email = document.getElementById("email").value; 
@@ -159,7 +159,7 @@ function ueberpruefung() {
 	var password2 = document.getElementById("reenterpassword").value;
 	
 	if(name.length < 2) {
-		document.getElementById("warnung").innerHTML = "Name ist zu kurz <br/>";
+		document.getElementById("warnung").innerHTML = "Der Benutzername ist zu kurz <br/>";
 	}
 	if(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email) == false) {
 		document.getElementById("warnung").innerHTML = document.getElementById("warnung").innerHTML + "E-Mail Adresse ist ungültig!<br/>";
@@ -169,6 +169,13 @@ function ueberpruefung() {
 	}
 	if(password1.length < 8) {
 		document.getElementById("warnung").innerHTML = document.getElementById("warnung").innerHTML + "Passwort muss mindestens 8 Zeichen lang sein!<br/>";
+	}
+}
+function ueberpruefungBenutzername() {
+	document.getElementById("warnung").innerHTML = "";
+	var name = document.getElementById("benutzername").value;
+	if(name.length < 2) {
+		document.getElementById("warnung").innerHTML = "Der Benutzername ist zu kurz <br/>";
 	}
 }
 </script>
