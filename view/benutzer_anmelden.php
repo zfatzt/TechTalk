@@ -6,13 +6,13 @@
 			<br>
 			<div class="bs-example bs-example-tabs">
 				<ul id="myTab" class="nav nav-tabs">
-					<li class="active"><a href="#signin" data-toggle="tab">Anmelden</a></li>
-					<li class=""><a href="#signup" data-toggle="tab">Registrieren</a></li>
+					<li class="<?php if ($tablogin) echo 'active' ?>"><a href="#signin" data-toggle="tab">Anmelden</a></li>
+					<li class="<?php if (!$tablogin) echo 'active' ?>"><a href="#signup" data-toggle="tab">Registrieren</a></li>
 				</ul>
 			</div>
 			<div class="modal-body">
 				<div id="myTabContent" class="tab-content">
-					<div class="tab-pane fade active in" id="signin">
+					<div class="tab-pane fade <?php if ($tablogin) echo 'active in' ?>" id="signin">
 						<form class="form-horizontal" method="post"
 							action="/ueberpruefung/anmelden">
 							<fieldset>
@@ -62,9 +62,9 @@
 
 
 
-					<div class="tab-pane fade" id="signup">
+					<div class="tab-pane fade <?php if (!$tablogin) echo 'active in' ?>" id="signup">
 						<!-- registrieren -->
-						<form onsubmit="myFunction()" class="form-horizontal"
+						<form class="form-horizontal"
 							method="post" action="/ueberpruefung/registrieren">
 							<fieldset>
 								<!-- Sign Up Form -->
@@ -131,10 +131,14 @@
 								<div class="control-group">
 									<label class="control-label" for="confirmsignup"></label>
 									<div class="controls">
-										<span id="warnung"></span> <input type="submit"
+										<span style="color: red" id="warnung"></span> <input type="submit"
 											value="Registrieren" id="confirmsignup" name="confirmsignup"
 											class="btn btn-success">
+										
 										</button>
+										<div>
+										<span id="serverWarnung"></span>
+										</div>
 									</div>
 								</div>
 							</fieldset>
@@ -151,6 +155,14 @@
 	</div>
 </div>
 <script>
+
+$( document ).ready(function() {
+
+	// Read url
+	
+	
+});
+
 function ueberpruefung() {
 	document.getElementById("warnung").innerHTML = "";
 	var name = document.getElementById("benutzername").value;

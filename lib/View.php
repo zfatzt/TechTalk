@@ -58,6 +58,7 @@ class View
     private $viewfile; 
 
     private $properties = array();
+    private $loginTabActive = true;
 
     public function __construct($viewfile)
     {
@@ -83,8 +84,8 @@ class View
         extract($this->properties);
 
         require './../view/header.php';
-        require './../view/benutzer_anmelden.php';
         require $this->viewfile;
+        require './../view/benutzer_anmelden.php';
         require './../view/footer.php';
     }
 }
