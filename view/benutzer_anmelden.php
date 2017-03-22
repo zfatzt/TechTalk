@@ -151,7 +151,7 @@
 	</div>
 </div>
 <script>
-function ueberpruefungEMail() {
+function ueberpruefung() {
 	document.getElementById("warnung").innerHTML = "";
 	var name = document.getElementById("benutzername").value;
 	var email = document.getElementById("email").value; 
@@ -171,12 +171,6 @@ function ueberpruefungEMail() {
 		document.getElementById("warnung").innerHTML = document.getElementById("warnung").innerHTML + "Passwort muss mindestens 8 Zeichen lang sein!<br/>";
 	}
 }
-function ueberpruefungBenutzername() {
-	document.getElementById("warnung").innerHTML = "";
-	var name = document.getElementById("benutzername").value;
-	if(name.length < 2) {
-		document.getElementById("warnung").innerHTML = "Der Benutzername ist zu kurz <br/>";
-	}
 }
 </script>
 </body>
