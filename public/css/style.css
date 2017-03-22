@@ -75,6 +75,24 @@ label.checkbox {
 	background-color: #e5e5e5;
 	padding: 50px 80px;
 }
+/* CHAT
+-------------------------------------------------- */
+#absendenButton{
+	width: 100px;
+}
+#chatbox {
+    text-align:left;
+    margin:0 auto;
+    margin-bottom:25px;
+    padding:10px;
+    background:#fff;
+    height:500px;
+    width:800px;
+    border:1px solid #ACD8F0;
+    overflow:auto; }
+#nachricht{
+	float: 	left;
+}
 
 /* NAVBAR
 -------------------------------------------------- */
