@@ -41,7 +41,7 @@
 						aria-expanded="false">Chats<span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="/chat/bitcoin">Bitcoin</a></li>
-							<li><a href="#">Dronen</a></li>
+							<li><a href="/chat/drone">Dronen</a></li>
 							<li><a href="#">Huawei P10</a></li>
 							<li role="separator" class="divider"></li>
 							<li class="dropdown-header">Admin</li>
