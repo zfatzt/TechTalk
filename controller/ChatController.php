@@ -4,17 +4,16 @@ class ChatController {
 		$view = new View ( 'chat_bitcoin' );
 		$view->title = 'Bitcoin Chat';
 		$view->heading = 'Bitcoin Chat';
+		$view->tablogin = true;
 		$view->display ();
 	}
-	
-	public function drone(){
+	public function drone() {
 		$view = new View ( 'chat_drone' );
 		$view->title = 'Drone Chat';
 		$view->heading = 'Drone Chat';
+		$view->tablogin = true;
 		$view->display ();
 	}
-
 }
-
 
 ?>
