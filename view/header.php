@@ -35,7 +35,7 @@
 					<li class="active"><a href="/"><p>Home</p></a></li>
 					<li><a href="#signup"
 		data-toggle="modal" data-target=".bs-modal-sm"><p>Login</p></a></li>
-					<li><a href="#contact"><p>Contact</p></a></li>
+					<li><a href="#contact"><p>Über uns</p></a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">Chats<span class="caret"></span></a>

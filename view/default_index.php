@@ -16,7 +16,8 @@
 					<h1>Bitcoin Talk</h1>
 					<p>Was haltest du von Bitcoins ?</p>
 					<p>
-						<a class="btn btn-lg btn-primary" href="#" role="button">Chatten</a>
+						<a class="btn btn-lg btn-primary" href="/chat/bitcoin"
+							role="button">Chatten</a>
 					</p>
 				</div>
 			</div>
@@ -28,7 +29,7 @@
 					<h1>Dronen Talk</h1>
 					<p>Dronen sind noch nicht sehr lange auf dem Markt.</p>
 					<p>
-						<a class="btn btn-lg btn-primary" href="#" role="button">Chatten</a>
+						<a class="btn btn-lg btn-primary" href="/chat/drone" role="button">Chatten</a>
 					</p>
 				</div>
 			</div>

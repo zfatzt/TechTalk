@@ -5,6 +5,8 @@
 			<h2>Kevin</h2>
 			<h2>Max</h2>
 			<h2>Tim</h2>
+			<h2>Tobias</h2>
+			<h2>Laurent</h2>
 		</div>
 		<div class="chatBoxKlein">
 			<a href="/chat/bitcoin"><h3>Bitcoin</h3></a> <a href="/chat/drone"><h3>Dronen</h3></a>
