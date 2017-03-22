@@ -63,14 +63,9 @@ class UeberpruefungController {
 			$view = new View('default_index');
 			$view->title = 'Anmeldung fehlgeschlagen';
 			$view->heading = '';
-			
-			$view->loginTabActive = "Hallo";
-			
-			
+			$view->tablogin = false;
 			$view->display();
-			
-			
-			
+
 			
 			echo "<script>document.getElementById('serverWarnung').innerHTML = 'Bitte beachten Sie die genannten Vorschriften.';
 					document.getElementById('login').click();

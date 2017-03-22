@@ -11,7 +11,7 @@ class DefaultController
         $view = new View('default_index');
         $view->title = 'Startseite';
         $view->heading = 'Startseite';
-        $view->tablogin = False;
+        $view->tablogin = true;
         $view->display();
     }
 }
