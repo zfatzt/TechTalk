@@ -77,21 +77,53 @@ label.checkbox {
 }
 /* CHAT
 -------------------------------------------------- */
-#absendenButton{
+#chat{
+	margin: 0 auto;
+	width: 1200px;
+}
+
+#absendenButton {
 	width: 100px;
 }
-#chatbox {
-    text-align:left;
-    margin:0 auto;
-    margin-bottom:25px;
-    padding:10px;
-    background:#fff;
-    height:500px;
-    width:800px;
-    border:1px solid #ACD8F0;
-    overflow:auto; }
-#nachricht{
-	float: 	left;
+
+.chatBoxGross {
+	text-align: left;
+	margin: 0 auto;
+	margin-bottom: 25px;
+	padding: 10px;
+	background: #fff;
+	height: 500px;
+	width: 800px;
+	border: 1px solid #c0c0c0;
+	overflow: auto;
+}
+
+#rechts {
+	height: auto;
+	width: 800px;
+	float: left;
+	margin-left: 20px;
+}
+
+.links {
+	float: left;
+}
+
+#nachricht {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.chatBoxKlein {
+	text-align: left;
+	margin: 0 auto;
+	margin-bottom: 25px;
+	padding: 10px;
+	background: #fff;
+	height: 235px;
+	width: 300px;
+	border: 1px solid #c0c0c0;
+	overflow: auto;
 }
 
 /* NAVBAR
