@@ -125,8 +125,8 @@
 								<div class="control-group">
 									<label class="control-label" for="confirmsignup"></label>
 									<div class="controls">
-										<input type="button" value="Submit" id="confirmsignup" name="confirmsignup"
-											class="btn btn-success">Registrieren</button>
+										<input type="button" value="Registrieren" id="confirmsignup" name="confirmsignup"
+											class="btn btn-success"></button>
 									</div>
 								</div>
 							</fieldset>
