@@ -1,4 +1,3 @@
-
 <!-- Carousel
     ================================================== -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -8,7 +7,6 @@
 		<li data-target="#myCarousel" data-slide-to="1"></li>
 		<li data-target="#myCarousel" data-slide-to="2"></li>
 	</ol>
-	<span id="serverWarnung"></span>
 	<div class="carousel-inner" role="listbox">
 		<div class="item active">
 			<img class="first-slide" src="/images/bitcoin.jpg" alt="First slide">

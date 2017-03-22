@@ -35,13 +35,13 @@
 					<li class="active"><a href="/"><p>Home</p></a></li>
 					<li><a href="#signup" id="login"
 		data-toggle="modal" data-target=".bs-modal-sm"><p>Login</p></a></li>
-					<li><a href="#contact"><p>Contact</p></a></li>
+					<li><a href="#contact"><p>Über uns</p></a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">Chats<span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="/chat/bitcoin">Bitcoin</a></li>
-							<li><a href="#">Dronen</a></li>
+							<li><a href="/chat/bitcoin">Dronen</a></li>
 							<li><a href="#">Huawei P10</a></li>
 							<li role="separator" class="divider"></li>
 							<li class="dropdown-header">Admin</li>
