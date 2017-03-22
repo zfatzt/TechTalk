@@ -131,9 +131,9 @@
 								<div class="control-group">
 									<label class="control-label" for="confirmsignup"></label>
 									<div class="controls">
-									<span id="warnung"></span>
-										<input type="submit" value="Registrieren" id="confirmsignup"
-											name="confirmsignup" class="btn btn-success">
+										<span id="warnung"></span> <input type="submit"
+											value="Registrieren" id="confirmsignup" name="confirmsignup"
+											class="btn btn-success">
 										</button>
 									</div>
 								</div>
@@ -171,7 +171,7 @@ function ueberpruefung() {
 		document.getElementById("warnung").innerHTML = document.getElementById("warnung").innerHTML + "Passwort muss mindestens 8 Zeichen lang sein!<br/>";
 	}
 }
-}
+
 </script>
 </body>
 </html>
