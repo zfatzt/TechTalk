@@ -33,8 +33,8 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="/"><p>Home</p></a></li>
-					<li><a href="#signup" id="login"
-		data-toggle="modal" data-target=".bs-modal-sm"><p>Login</p></a></li>
+					<li><a href="#signup" id="login" data-toggle="modal"
+						data-target=".bs-modal-sm"><p>Login</p></a></li>
 					<li><a href="ueberuns/ueberuns"><p>Über uns</p></a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -50,6 +50,7 @@
 						</ul>
 				
 				</ul>
+							<p style="float: right;" id="loginBestaetigung"></p>
 			</div>
 
 		</div>

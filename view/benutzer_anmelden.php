@@ -55,6 +55,7 @@
 										<button id="signin" type="submit" name="signin"
 											class="btn btn-success">Einloggen</button>
 									</div>
+									<div id="loginFehler"></div>
 								</div>
 							</fieldset>
 						</form>

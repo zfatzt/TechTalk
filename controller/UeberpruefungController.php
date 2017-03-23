@@ -21,38 +21,49 @@ class UeberpruefungController {
 			
 			$userRepository = new UserRepository ();
 			$loginResult = $userRepository->existiertNutzer ( $email, $passwort );
-			if ($loginResult->getBuntzerExistiert () && $loginResult->getBuntzerKannEinloggen ()) {
+			if ($loginResult->getBuntzerExistiert () != null && $loginResult->getBenutzername() !=null) {
+				
+				$view = new View('default_index');
+				$view->title = 'Anmeldung fehlgeschlagen';
+				$view->heading = '';
+				$view->tablogin = true;
+				$view->display();
+				
+			
 				$_SESSION ["benutzername"] = $loginResult->getBenutzername ();
-				echo"<script>alert('Login erfolgreich'); </script>";
-				header ( "Location: /" );
-				exit ();
+				
+				echo "<script> alert('Sie sind eingloggt als: " . $loginResult->getBenutzername() . "');</script>";
+				
 			} else {
-				header ( "Location: /" );
+				$view = new View('default_index');
+				$view->title = 'Login Fehlgeschlagen';
+				$view->heading = '';
+				$view->tablogin = true;
+				$view->display();
+				
+					
+				echo "<script>document.getElementById('loginFehler').innerHTML = 'Login Fehlgeschlagen';
+						document.getElementById('login').click();
+		
+					</script>";
+				}
 			}
 		}
-	}
+		
 	public function registrieren() {
 		if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 			
 			$email = htmlspecialchars ( $_POST ["email"] );
 			
 			$benutzername = htmlspecialchars ( $_POST ['benutzername'] );
-			if (empty ( $benutzername )) {
-				$benutzerNameErr = "Bitte geben Sie einen Benutzernamen ein!";
-			}
 			
 			$passwort = htmlspecialchars ( $_POST ['password'] );
-			if (empty ( $passwort )) {
-				$passwortErr = "Bitte geben Sie ein Passwort ein!";
-			}
+			
 			
 			$passwortWiederholen = htmlspecialchars ( $_POST ['reenterpassword'] );
-			if (empty ( $passwortWiederholen )) {
-				$passwortErr = "Bitte geben Sie ein Passwort ein!";
-			}
 			
 			$computercheck = $_POST ['humancheck'];
-		}
+
 		
 		if ($passwort === $passwortWiederholen && $computercheck == "human") {
 			$userRepository = new UserRepository ();
@@ -72,9 +83,8 @@ class UeberpruefungController {
 					
 					alert('Registration Fehlgeschlagen, Bitte Registrieren Sie sich erneut');
 					</script>";
-		
-				
-		}
+			}
+		}	
 	}
 }
 ?>
