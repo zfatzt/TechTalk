@@ -37,8 +37,7 @@
 					<?php
 					
 					if (isset ( $username )) {
-						echo '<a href="/" id="logout" ><p>Logout</p></a>';
-						// session_destroy ();
+						echo '<a href="#" onclick="logout()" ><p>Logout</p></a>';
 					} else {
 						echo '<a href="#signup" id="login" data-toggle="modal"
 						data-target=".bs-modal-sm"><p>Login</p></a>';
@@ -50,9 +49,9 @@
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">Chats<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="/chat/chatErstellen?name=bitcoin&id=1">Bitcoin</a></li>
-							<li><a href="/chat/chatErstellen?name=dronen&id=2">Dronen</a></li>
-							<li><a href="/chat/chatErstellen?name=Huawei P10&id=3">Huawei P10</a></li>
+							<li><a href="/chat/chatErstellen?name=bitcoin&chat_id=1">Bitcoin</a></li>
+							<li><a href="/chat/chatErstellen?name=dronen&chat_id=2">Dronen</a></li>
+							<li><a href="/chat/chatErstellen?name=Huawei P10&chat_id=3">Huawei P10</a></li>
 							<li role="separator" class="divider"></li>
 							<li class="dropdown-header">Admin</li>
 							<li><a href="#">Admin Chat</a></li>
@@ -66,10 +65,15 @@
 						echo "";
 					}
 					?>
+					
+
+				
+				
 				</ul>
 				<p style="float: right;">
 				
 				<?php
+				
 				if (isset ( $username )) {
 					echo "sie sind eingeloggt als:" . $username;
 				} else {
@@ -81,10 +85,9 @@
 		</div>
 	</nav>
 	<main> <script>
-	function destroy_session(){
-	    var xmlhttp = getXmlHttp();
+	function logout(){
 	    var xmlhttp = new XMLHttpRequest();
-	    xmlhttp.open('GET','./destroy_session.php', true);
+	    xmlhttp.open('GET','./controller/LogoutController.php', true);
 	    xmlhttp.onreadystatechange=function(){
 	       if (xmlhttp.readyState == 4){
 	          if(xmlhttp.status == 200){
@@ -94,4 +97,4 @@
 	    };
 	    xmlhttp.send(null);
 	}
-	</script>
+</script>

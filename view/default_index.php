@@ -15,7 +15,7 @@
 					<h1>Bitcoin Talk</h1>
 					<p>Was haltest du von Bitcoins ?</p>
 					<p>
-						<a class="btn btn-lg btn-primary" href="/chat/chatErstellen?name=bitcoin&id=1"
+						<a class="btn btn-lg btn-primary" href="/chat/chatErstellen?name=bitcoin&chat_id=1"
 							role="button">Chatten</a>
 					</p>
 				</div>
@@ -28,7 +28,7 @@
 					<h1>Dronen Talk</h1>
 					<p>Dronen sind noch nicht sehr lange auf dem Markt.</p>
 					<p>
-						<a class="btn btn-lg btn-primary" href="/chat/chatErstellen?name=dronen&id=2" role="button">Chatten</a>
+						<a class="btn btn-lg btn-primary" href="/chat/chatErstellen?name=dronen&chat_id=2"  role="button">Chatten</a>
 					</p>
 				</div>
 			</div>
@@ -42,7 +42,7 @@
 					<p>Das neue Huawei P10 ist raus. Was haltest du von dem Smartphone
 						?</p>
 					<p>
-						<a class="btn btn-lg btn-primary" href="/chat/chatErstellen?name=Huawei P10&id=3" role="button">Chatten </a>
+						<a class="btn btn-lg btn-primary" href="/chat/chatErstellen?name=Huawei P10&chat_id=3" role="button">Chatten </a>
 					</p>
 				</div>
 			</div>
