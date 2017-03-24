@@ -7,19 +7,19 @@
           <div class="form-group">
             <label class="col-lg-3 control-label">Email:</label>
             <div class="col-lg-8">
-              <input class="form-control" type="email"" required="required">
+              <input class="form-control" id="accountBearbeitenEmail" type="text" value="<?php echo$_SESSION['email'];?>" >
             </div>
           </div>
           <div class="form-group">
             <label class="col-md-3 control-label">Benutzername:</label>
             <div class="col-md-8">
-              <input class="form-control" type="text" required="required">
+              <input class="form-control" type="text" required="required" value="<?php echo$_SESSION['benutzername'];?>" >
             </div>
           </div>
           <div class="form-group">
             <label class="col-md-3 control-label">Password:</label>
             <div class="col-md-8">
-              <input class="form-control" type="password" required="required" >
+              <input class="form-control" type="password" required="required">
             </div>
           </div>
           <div class="form-group">
