@@ -31,7 +31,7 @@ class ChatController {
 			$chatRepo = new ChatRepository ();
 			$chat_id = $_GET ["chat_id"];
 			$chat_id = intval($chat_id);
-			$kunde_id = $_POST ["kunde_id"];
+			$kunde_id = $_SESSION ["id"];
 			$kunde_id = intval($kunde_id);
 			$text_id = $chatRepo->textSpeichern ( $nachricht );
 			$text_id = intval($text_id);

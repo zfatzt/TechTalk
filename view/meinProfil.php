@@ -2,18 +2,19 @@
     <h1>Edit Profile</h1>
   	<hr>
         <h3>Personal info</h3>
-        <form class="form-horizontal" role="form">
+        <form class="form-horizontal" method="post"
+							action="/user/profilBearbeitetn()">
 
           <div class="form-group">
             <label class="col-lg-3 control-label">Email:</label>
             <div class="col-lg-8">
-              <input class="form-control" id="accountBearbeitenEmail" type="text" value="<?php echo$_SESSION['email'];?>" >
+              <input class="form-control" id="accountBearbeitenEmail" type="text" value="<?php echo $_SESSION['email'];?>" >
             </div>
           </div>
           <div class="form-group">
             <label class="col-md-3 control-label">Benutzername:</label>
             <div class="col-md-8">
-              <input class="form-control" type="text" required="required" value="<?php echo$_SESSION['benutzername'];?>" >
+              <input class="form-control" type="text" required="required" value="<?php echo $_SESSION['benutzername'];?>" >
             </div>
           </div>
           <div class="form-group">
