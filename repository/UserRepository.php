@@ -17,6 +17,22 @@ class UserRepository extends Repository {
 		
 		return $statement->insert_id;
 	}
+	public function benutzerBearbeiten($id, $benutzername, $passwort, $email) {
+		$sql = "UPDATE techtalk.kunde SET benutzername = ?, email = ?, passwort =? WHERE id=? ;";
+		
+		$statement = ConnectionHandler::getConnection ()->prepare ( $sql );
+		
+		$statement->bind_param ( 'ssss', $benutzername, $email, $passwort, $id);
+		
+		if (! $statement->execute ()) {
+			throw new Exception ( $statement->error );
+		}
+		
+		
+	}
+
+
+	
 	public function existiertNutzer($email, $passwort) {
 		$sql = "SELECT id, email, passwort, benutzername FROM techtalk.kunde where email=? and passwort=?";
 		
@@ -47,6 +63,8 @@ class UserRepository extends Repository {
 		$loginResult->setEmail ( $email );
 		return $loginResult;
 	}
+	
+	
 	public function nutzerAuslesen() {
 		$sql = "SELECT techtalk.kunde.benutzername FROM techtalk.kunde";
 		
@@ -70,20 +88,23 @@ class UserRepository extends Repository {
 			return "0 results";
 		}
 	}
+	
+	
 	public function kundennameAuslesen($id) {
 		$sql = "SELECT benutzername FROM techtalk.kunde where id = ?";
-		
+	
 		$statement = ConnectionHandler::getConnection ()->prepare ( $sql );
-		
+	
 		$statement->bind_param ( 'i', $id );
-		
+	
 		$statement->execute ();
-		
+	
 		$result = $statement->get_result ();
-		
+	
 		if (! $statement->execute ()) {
 			throw new Exception ( $statement->error );
-		} 
+		}
 	}
+	
 }
 ?>
