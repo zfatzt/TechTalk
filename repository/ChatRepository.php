@@ -39,5 +39,7 @@ class ChatRepository extends Repository {
 		
 		return $statement->insert_id;
 	}
+
+
 }
 ?>

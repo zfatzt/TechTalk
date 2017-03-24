@@ -5,9 +5,9 @@
 			<h2><?= $alleUser ?></h2>
 		</div>
 		<div class="chatBoxKlein">
-			<a href="/chat/chatErstellen?name=bitcoin&id=1"><h3>Bitcoin</h3></a>
-			<a href="/chat/chatErstellen?name=dronen&id=2"><h3>Dronen</h3></a>
-			<a href="/chat/chatErstellen?name=Huawei P10&id=3"><h3>Huawei P10</h3></a>
+			<a href="/chat/chatErstellen?name=bitcoin&chat_id=1"><h3>Bitcoin</h3></a>
+			<a href="/chat/chatErstellen?name=dronen&chat_id=2"><h3>Dronen</h3></a>
+			<a href="/chat/chatErstellen?name=Huawei P10&chat_id=3"><h3>Huawei P10</h3></a>
 		</div>
 	</div>
 	<div id="rechts" class="col">
@@ -15,7 +15,7 @@
 		<?= $alleNachrichten ?>
 		</div>
 		<div id="nachricht">
-			<form action="/chat/chatSenden?name=<?=$name ?>&id=<?=$id?>"
+			<form action="/chat/chatSenden?name=<?=$name ?>&chat_id=<?=$chat_id?>"
 				method="post">
 				<div class="input-group">
 					<input type="text" class="form-control"
