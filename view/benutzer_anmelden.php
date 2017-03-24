@@ -6,13 +6,16 @@
 			<br>
 			<div class="bs-example bs-example-tabs">
 				<ul id="myTab" class="nav nav-tabs">
-					<li class="<?php if ($tablogin) echo 'active' ?>"><a href="#signin" data-toggle="tab">Anmelden</a></li>
-					<li class="<?php if (!$tablogin) echo 'active' ?>"><a href="#signup" data-toggle="tab">Registrieren</a></li>
+					<li class="<?php if ($tablogin) echo 'active' ?>"><a href="#signin"
+						data-toggle="tab">Anmelden</a></li>
+					<li class="<?php if (!$tablogin) echo 'active' ?>"><a
+						href="#signup" data-toggle="tab">Registrieren</a></li>
 				</ul>
 			</div>
 			<div class="modal-body">
 				<div id="myTabContent" class="tab-content">
-					<div class="tab-pane fade <?php if ($tablogin) echo 'active in' ?>" id="signin">
+					<div class="tab-pane fade <?php if ($tablogin) echo 'active in' ?>"
+						id="signin">
 						<form class="form-horizontal" method="post"
 							action="/ueberpruefung/anmelden">
 							<fieldset>
@@ -55,6 +58,7 @@
 										<button id="signin" type="submit" name="signin"
 											class="btn btn-success">Einloggen</button>
 									</div>
+									<div id="loginFehler"></div>
 								</div>
 							</fieldset>
 						</form>
@@ -62,10 +66,12 @@
 
 
 
-					<div class="tab-pane fade <?php if (!$tablogin) echo 'active in' ?>" id="signup">
+					<div
+						class="tab-pane fade <?php if (!$tablogin) echo 'active in' ?>"
+						id="signup">
 						<!-- registrieren -->
-						<form class="form-horizontal"
-							method="post" action="/ueberpruefung/registrieren">
+						<form class="form-horizontal" method="post"
+							action="/ueberpruefung/registrieren">
 							<fieldset>
 								<!-- Sign Up Form -->
 								<!-- Text input-->
@@ -131,13 +137,13 @@
 								<div class="control-group">
 									<label class="control-label" for="confirmsignup"></label>
 									<div class="controls">
-										<span style="color: red" id="warnung"></span> <input type="submit"
-											value="Registrieren" id="confirmsignup" name="confirmsignup"
-											class="btn btn-success">
-										
+										<span style="color: red" id="warnung"></span> <input
+											type="submit" value="Registrieren" id="confirmsignup"
+											name="confirmsignup" class="btn btn-success">
+
 										</button>
 										<div>
-										<span id="serverWarnung"></span>
+											<span id="serverWarnung"></span>
 										</div>
 									</div>
 								</div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title><?= $title ?> | Tech Talk</title>
+<title><?= $title ?> | Laurent Tech</title>
 
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet"
@@ -33,8 +33,18 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="/"><p>Home</p></a></li>
-					<li><a href="#signup" id="login"
-		data-toggle="modal" data-target=".bs-modal-sm"><p>Login</p></a></li>
+					<li>
+					<?php
+					
+					if (isset ( $username)) {
+						echo '<a href="/" id="logout" ><p>Logout</p></a>';
+						//session_destroy ();
+					} else {
+						echo '<a href="#signup" id="login" data-toggle="modal"
+						data-target=".bs-modal-sm"><p>Login</p></a>';
+					}
+					?>
+					</li>
 					<li><a href="ueberuns/ueberuns"><p>Über uns</p></a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -48,10 +58,47 @@
 							<li><a href="#">Admin Chat</a></li>
 							<li><a href="#">Support</a></li>
 						</ul>
+					<?php
+					
+					if (isset ($username)) {
+						echo '<li><a href="user/meinProfil"><p>Mein Profil</p></a></li>';
+					} else {
+						echo "";
+					}
+					?>
+					
+				
+				
 				
 				</ul>
+				<p style="float: right;">
+				
+				<?php
+				
+				 
+				if (isset ( $username )) {
+					echo "sie sind eingeloggt als:" . $username;
+				} else {
+					echo "";
+				}
+				?></p>
 			</div>
 
 		</div>
 	</nav>
 	<main>
+	<script>
+	function destroy_session(){
+	    var xmlhttp = getXmlHttp();
+	    var xmlhttp = new XMLHttpRequest();
+	    xmlhttp.open('GET','./destroy_session.php', true);
+	    xmlhttp.onreadystatechange=function(){
+	       if (xmlhttp.readyState == 4){
+	          if(xmlhttp.status == 200){
+	             alert(xmlhttp.responseText);
+	         }
+	       }
+	    };
+	    xmlhttp.send(null);
+	}
+	</script>

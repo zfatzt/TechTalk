@@ -10,7 +10,7 @@ class LoginResult {
 	}
 	
 	public function getBenutzername() {
-		return $benutzername;
+		return $this->benutzername;
 	}
 	
 	public function setBenutzerExistiert($benutzerExistiert){

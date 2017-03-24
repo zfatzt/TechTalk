@@ -18,7 +18,7 @@ class UserRepository extends Repository {
 		return $statement->insert_id;
 	}
 	public function existiertNutzer($email, $passwort) {
-		$sql = "SELECT techtalk.kunde.email, techtalk.kunde.passwort, techtalk.kunde.benutzername FROM techtalk.kunde where email=? and passwort=?";
+		$sql = "SELECT email, passwort, benutzername FROM techtalk.kunde where email=? and passwort=?";
 		
 		$statement = ConnectionHandler::getConnection ()->prepare ( $sql );
 		
@@ -27,14 +27,15 @@ class UserRepository extends Repository {
 		$statement->bind_param ( 'ss', $email, $passwort );
 		
 		$statement->execute ();
+		
 		$result = $statement->get_result ();
 		
 		if (! $statement->execute ()) {
 			throw new Exception ( $statement->error );
 		}
 		
-		$row = $result->fetch_assoc ();
-		$benutzername = $row ["benutzername"];
+		$row = $result->fetch_row ();
+		$benutzername = $row [2];
 		
 		$loginResult = new LoginResult ();
 		$loginResult->setBenutzerExistiert ( true );
@@ -42,15 +43,16 @@ class UserRepository extends Repository {
 		$loginResult->setBenutzername ( $benutzername );
 		return $loginResult;
 	}
+	
 	public function nutzerAuslesen() {
 		$sql = "SELECT techtalk.kunde.benutzername FROM techtalk.kunde";
-		
+	
 		$statement = ConnectionHandler::getConnection ()->prepare ( $sql );
-		
+	
 		$statement->execute ();
-		
+	
 		$result = $statement->get_result ();
-		
+	
 		if (! $statement->execute ()) {
 			throw new Exception ( $statement->error );
 		}
@@ -65,5 +67,8 @@ class UserRepository extends Repository {
 			return "0 results";
 		}
 	}
+
 }
+
+
 ?>

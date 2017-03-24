@@ -28,6 +28,20 @@ class UserController {
 		$view->display ();
 	}
 
+	public function meinProfil() {
+		$view = new View ( 'meinProfil' );
+		$view->title = 'Mein Profil';
+		$view->heading = 'Mein Profil';
+		$view->display ();
+	}
+	
+	
+	public function meinProfilBearbeitetn(){
+		
+	}
+	
+	
+	
 	public function delete() {
 		$userRepository = new UserRepository ();
 		$userRepository->deleteById ( $_GET ['id'] );

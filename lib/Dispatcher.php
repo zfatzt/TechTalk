@@ -28,6 +28,10 @@ class Dispatcher
      */
     public static function dispatch()
     {
+    	if (!isset($_SESSION)){
+    		session_start();
+    	}
+        
         // Die URI wird aus dem $_SERVER Array ausgelesen und in ihre
         //   Einzelteile zerlegt.
         // /user/index/foo --> ['user', 'index', 'foo']

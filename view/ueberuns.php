@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="parallax3"></div>
 <div class="textfield">
 	<h3>Über Uns</h3>
@@ -30,6 +29,3 @@
 	option congue nihil imperdiet doming id quod mazim placerat facer
 
 </div>
-=======
-<h3>Über uns</h3>
->>>>>>> branch 'master' of https://github.com/zfatzt/TechTalk
