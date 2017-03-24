@@ -18,7 +18,7 @@ class UserRepository extends Repository {
 		return $statement->insert_id;
 	}
 	public function existiertNutzer($email, $passwort) {
-		$sql = "SELECT email, passwort, benutzername FROM techtalk.kunde where email=? and passwort=?";
+		$sql = "SELECT id, email, passwort, benutzername FROM techtalk.kunde where email=? and passwort=?";
 		
 		$statement = ConnectionHandler::getConnection ()->prepare ( $sql );
 		
@@ -34,13 +34,17 @@ class UserRepository extends Repository {
 			throw new Exception ( $statement->error );
 		}
 		
-		$row = $result->fetch_row ();
-		$benutzername = $row [2];
+		$row = $result->fetch_assoc ();
+		$benutzername = $row ["benutzername"];
+		$id = $row["id"];
 		
 		$loginResult = new LoginResult ();
 		$loginResult->setBenutzerExistiert ( true );
 		$loginResult->setBenutzerKannEinloggen ( true );
 		$loginResult->setBenutzername ( $benutzername );
+		$loginResult->setId($id);
+		$loginResult->setPasswort($passwort);
+		$loginResult->setEmail($email);
 		return $loginResult;
 	}
 	

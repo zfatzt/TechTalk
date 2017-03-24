@@ -37,14 +37,14 @@
 					<?php
 					
 					if (isset ( $username )) {
-						echo '<a href="#" onclick="logout()" ><p>Logout</p></a>';
+						echo '<a href="/" onclick="logout()" ><p>Logout</p></a>';
 					} else {
 						echo '<a href="#signup" id="login" data-toggle="modal"
 						data-target=".bs-modal-sm"><p>Login</p></a>';
 					}
 					?>
 					</li>
-					<li><a href="ueberuns/ueberuns"><p>Über uns</p></a></li>
+					<li><a href="/ueberuns/ueberuns"><p>Über uns</p></a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">Chats<span class="caret"></span></a>
@@ -60,7 +60,7 @@
 					<?php
 					
 					if (isset ( $username )) {
-						echo '<li><a href="user/meinProfil"><p>Mein Profil</p></a></li>';
+						echo '<li><a href="/user/meinProfil"><p>Mein Profil</p></a></li>';
 					} else {
 						echo "";
 					}
@@ -87,7 +87,7 @@
 	<main> <script>
 	function logout(){
 	    var xmlhttp = new XMLHttpRequest();
-	    xmlhttp.open('GET','./controller/LogoutController.php', true);
+	    xmlhttp.open('GET','/logout/', true);
 	    xmlhttp.onreadystatechange=function(){
 	       if (xmlhttp.readyState == 4){
 	          if(xmlhttp.status == 200){

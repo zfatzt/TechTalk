@@ -15,23 +15,14 @@ class UserController {
 		$view->users = $userRepository->readAll ();
 		$view->display ();
 	}
-	public function create() {
-		$view = new View ( 'benutzer_erstellen' );
-		$view->title = 'Benutzer erstellen';
-		$view->heading = 'Benutzer erstellen';
-		$view->display ();
-	}
-	public function anmelden() {
-		$view = new View ( 'benutzer_anmelden' );
-		$view->title = 'Anmeldung';
-		$view->heading = 'Startseite';
-		$view->display ();
-	}
 
 	public function meinProfil() {
 		$view = new View ( 'meinProfil' );
 		$view->title = 'Mein Profil';
 		$view->heading = 'Mein Profil';
+		if (isset($_SESSION['benutzername'])){
+			$view->username = $_SESSION['benutzername'];
+		}
 		$view->display ();
 	}
 	

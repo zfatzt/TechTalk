@@ -13,6 +13,9 @@ class UeberpruefungController {
 			if ($loginResult->getBuntzerExistiert () != null && $loginResult->getBenutzername () != null) {
 				
 				$_SESSION ['benutzername'] = $loginResult->getBenutzername();
+				$_SESSION['id'] = $loginResult->getId();
+				$_SESSION['passwort'] = $loginResult->getPasswort();
+				$_SESSION['email'] = $loginResult->getEmail();
 				header("Location: /");
 			
 				

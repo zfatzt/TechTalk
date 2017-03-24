@@ -15,11 +15,11 @@ class ChatController {
 		}
 		$view->name = $name;
 		$view->chat_id = $chat_id;
-		
+
 		$userRepo = new UserRepository ();
 		$alleUser = $userRepo->nutzerAuslesen ();
 		$view->alleUser = $alleUser;
-		
+
 		$chatRepo = new ChatRepository ();
 		$alleNachrichten = $chatRepo->textAuslesen ( $chat_id );
 		$view->alleNachrichten = $alleNachrichten;
