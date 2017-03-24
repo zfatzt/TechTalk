@@ -13,6 +13,7 @@ class ChatController {
 		if (isset($_SESSION["benutzername"])){
 			$view->username = $_SESSION["benutzername"];
 		}
+		$view->kunde_id = $_SESSION["id"];
 		$view->name = $name;
 		$view->chat_id = $chat_id;
 		$userRepo = new UserRepository ();
@@ -30,9 +31,11 @@ class ChatController {
 			$chatRepo = new ChatRepository ();
 			$chat_id = $_GET ["chat_id"];
 			$chat_id = intval($chat_id);
+			$kunde_id = $_POST ["kunde_id"];
+			$kunde_id = intval($kunde_id);
 			$text_id = $chatRepo->textSpeichern ( $nachricht );
 			$text_id = intval($text_id);
-			$view->chat = $chatRepo->textZuordnen ( $text_id, $chat_id );
+			$view->chat = $chatRepo->textZuordnen ( $text_id, $chat_id, $kunde_id );
 			$name = $_GET ["name"];
 			$this->chatErstellen ();
 		} else {

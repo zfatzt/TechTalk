@@ -40,11 +40,10 @@ class ChatRepository extends Repository {
 		
 		return $statement->insert_id;
 	}
-	public function textZuordnen($text_id, $chat_id) {
+	public function textZuordnen($text_id, $chat_id, $kunde_id) {
 		$sql = "INSERT INTO techtalk.chat_text_user (chat_id, text_id, kunde_id) VALUES (?, ?, ?)";
 		
 		$statement = ConnectionHandler::getConnection ()->prepare ( $sql );
-		$kunde_id = 1;
 		
 		$statement->bind_param ( 'iii', $chat_id, $text_id, $kunde_id );
 		
