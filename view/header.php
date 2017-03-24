@@ -69,17 +69,17 @@
 
 				
 				
-				</ul>
-				<p style="float: right;">
+			</ul>
+			<ul class="nav navbar-nav" style="float: right; margin-top: auto; padding: auto;">
 				
 				<?php
 				
 				if (isset ( $username )) {
-					echo "sie sind eingeloggt als:" . $username;
+					echo "<span style='color: white;'> Eingeloggt als: " . $username . "</span>";
 				} else {
 					echo "";
 				}
-				?></p>
+				?></ul>
 			</div>
 
 		</div>

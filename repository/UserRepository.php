@@ -22,7 +22,7 @@ class UserRepository extends Repository {
 		
 		$statement = ConnectionHandler::getConnection ()->prepare ( $sql );
 		
-		$statement->bind_param ( 'ssss', $benutzername, $email, $passwort, $id);
+		$statement->bind_param ( 'sssi', $benutzername, $email, $passwort, $id);
 		
 		if (! $statement->execute ()) {
 			throw new Exception ( $statement->error );

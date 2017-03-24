@@ -80,7 +80,7 @@
 									<div class="controls">
 										<input id="email" name="email" class="form-control"
 											type="email" placeholder="max@mustermann.ch"
-											class="input-large" required="" onkeyup="ueberpruefung()">
+											class="input-large" required="" onchange="ueberpruefung()">
 									</div>
 								</div>
 
@@ -91,7 +91,7 @@
 										<div class="controls">
 											<input id="benutzername" name="benutzername"
 												class="form-control" type="text" placeholder="Max457"
-												class="input-large" required="" onkeyup="ueberpruefung()">
+												class="input-large" required="" onchange="ueberpruefung()">
 										</div>
 									</div>
 
@@ -103,7 +103,7 @@
 										<div class="controls">
 											<input id="password" name="password" class="form-control"
 												type="password" placeholder="********" class="input-large"
-												onkeyup="ueberpruefung()"> <em>1-8 Characters</em>
+												onchange="ueberpruefung()"> <em>1-8 Characters</em>
 										</div>
 									</div>
 
@@ -161,14 +161,6 @@
 	</div>
 </div>
 <script>
-
-$( document ).ready(function() {
-
-	// Read url
-	
-	
-});
-
 function ueberpruefung() {
 	document.getElementById("warnung").innerHTML = "";
 	var name = document.getElementById("benutzername").value;
