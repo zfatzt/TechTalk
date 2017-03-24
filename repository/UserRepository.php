@@ -70,5 +70,20 @@ class UserRepository extends Repository {
 			return "0 results";
 		}
 	}
+	public function kundennameAuslesen($id) {
+		$sql = "SELECT benutzername FROM techtalk.kunde where id = ?";
+		
+		$statement = ConnectionHandler::getConnection ()->prepare ( $sql );
+		
+		$statement->bind_param ( 'i', $id );
+		
+		$statement->execute ();
+		
+		$result = $statement->get_result ();
+		
+		if (! $statement->execute ()) {
+			throw new Exception ( $statement->error );
+		} 
+	}
 }
 ?>
