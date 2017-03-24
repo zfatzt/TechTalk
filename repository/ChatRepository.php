@@ -26,7 +26,7 @@ class ChatRepository extends Repository {
 			return "-keine Nachrichten-";
 		}
 	}
-	public function textSpeichern($text, $id) {
+	public function textSpeichern($text) {
 		$sql = "INSERT INTO techtalk.text (text) VALUES (?)";
 		
 		$statement = ConnectionHandler::getConnection ()->prepare ( $sql );
@@ -39,7 +39,17 @@ class ChatRepository extends Repository {
 		
 		return $statement->insert_id;
 	}
-
-
+	public function textZuordnen($text_id, $chat_id) {
+		$sql = "INSERT INTO techtalk.chat_text_user (chat_id, text_id, kunde_id) VALUES (?, ?, ?)";
+		
+		$statement = ConnectionHandler::getConnection ()->prepare ( $sql );
+		$kunde_id = 1;
+		
+		$statement->bind_param ( 'iii', $chat_id, $text_id, $kunde_id );
+		
+		if (! $statement->execute ()) {
+			throw new Exception ( $statement->error );
+		}
+	}
 }
 ?>
