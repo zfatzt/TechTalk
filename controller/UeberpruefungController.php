@@ -12,13 +12,11 @@ class UeberpruefungController {
 			$loginResult = $userRepository->existiertNutzer ( $email, $passwort );
 			if ($loginResult->getBuntzerExistiert () != null && $loginResult->getBenutzername () != null) {
 				
-				$_SESSION ['benutzername'] = $loginResult->getBenutzername();
-				$_SESSION['id'] = $loginResult->getId();
-				$_SESSION['passwort'] = $loginResult->getPasswort();
-				$_SESSION['email'] = $loginResult->getEmail();
-				header("Location: /");
-			
-				
+				$_SESSION ['benutzername'] = $loginResult->getBenutzername ();
+				$_SESSION ['id'] = $loginResult->getId ();
+				$_SESSION ['passwort'] = $loginResult->getPasswort ();
+				$_SESSION ['email'] = $loginResult->getEmail ();
+				header ( "Location: /" );
 			} else {
 				
 				$view = new View ( 'default_index' );
@@ -46,7 +44,7 @@ class UeberpruefungController {
 				$userRepository = new UserRepository ();
 				$userRepository->benutzerErstellen ( $benutzername, $email, $passwort );
 				header ( "Location: /" );
-				exit();
+				exit ();
 			} else {
 				$view = new View ( 'default_index' );
 				$view->title = 'Anmeldung fehlgeschlagen';

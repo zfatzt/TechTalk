@@ -36,27 +36,26 @@ class UserRepository extends Repository {
 		
 		$row = $result->fetch_assoc ();
 		$benutzername = $row ["benutzername"];
-		$id = $row["id"];
+		$id = $row ["id"];
 		
 		$loginResult = new LoginResult ();
 		$loginResult->setBenutzerExistiert ( true );
 		$loginResult->setBenutzerKannEinloggen ( true );
 		$loginResult->setBenutzername ( $benutzername );
-		$loginResult->setId($id);
-		$loginResult->setPasswort($passwort);
-		$loginResult->setEmail($email);
+		$loginResult->setId ( $id );
+		$loginResult->setPasswort ( $passwort );
+		$loginResult->setEmail ( $email );
 		return $loginResult;
 	}
-	
 	public function nutzerAuslesen() {
 		$sql = "SELECT techtalk.kunde.benutzername FROM techtalk.kunde";
-	
+		
 		$statement = ConnectionHandler::getConnection ()->prepare ( $sql );
-	
+		
 		$statement->execute ();
-	
+		
 		$result = $statement->get_result ();
-	
+		
 		if (! $statement->execute ()) {
 			throw new Exception ( $statement->error );
 		}
@@ -71,8 +70,5 @@ class UserRepository extends Repository {
 			return "0 results";
 		}
 	}
-
 }
-
-
 ?>
