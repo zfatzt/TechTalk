@@ -58,6 +58,16 @@ label.checkbox {
 	background-size: cover;
 }
 
+.parallax3 {
+	background-image: url("/images/Zurich-Panorama.jpg");
+	min-width: auto;
+	min-height: 600px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .eingabeNachricht {
 	position: absolute;
 	height: auto;
@@ -75,6 +85,7 @@ label.checkbox {
 	background-color: #e5e5e5;
 	padding: 50px 80px;
 }
+
 /* CHAT
 -------------------------------------------------- */
 #chat {

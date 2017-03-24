@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title><?= $title ?> | Laurent Tech</title>
+<title><?= $title ?> | Tech Talk</title>
 
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet"
@@ -33,15 +33,15 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="/"><p>Home</p></a></li>
-					<li><a href="#signup" id="login" data-toggle="modal"
-						data-target=".bs-modal-sm"><p>Login</p></a></li>
+					<li><a href="#signup" id="login"
+		data-toggle="modal" data-target=".bs-modal-sm"><p>Login</p></a></li>
 					<li><a href="ueberuns/ueberuns"><p>Über uns</p></a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">Chats<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="/chat/bitcoin">Bitcoin</a></li>
-							<li><a href="/chat/drone">Dronen</a></li>
+							<li><a href="/chat/chatErstellen?name=bitcoin">Bitcoin</a></li>
+							<li><a href="/chat/chatErstellen?name=drone">Dronen</a></li>
 							<li><a href="#">Huawei P10</a></li>
 							<li role="separator" class="divider"></li>
 							<li class="dropdown-header">Admin</li>
@@ -50,7 +50,6 @@
 						</ul>
 				
 				</ul>
-							<p style="float: right;" id="loginBestaetigung"></p>
 			</div>
 
 		</div>
