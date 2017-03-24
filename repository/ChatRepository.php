@@ -1,10 +1,12 @@
 <?php
 require_once '../lib/Repository.php';
 class ChatRepository extends Repository {
-	public function textAuslesen() {
-		$sql = "SELECT techtalk.text.text FROM techtalk.text";
+	public function textAuslesen($id) {
+		$sql = "SELECT text FROM techtalk.text join chat_text_user on chat_text_user.text_id=text.id where chat_text_user.chat_id=? ";
 		
 		$statement = ConnectionHandler::getConnection ()->prepare ( $sql );
+		
+		$statement->bind_param ( 'i', $id );
 		
 		$statement->execute ();
 		
@@ -21,21 +23,20 @@ class ChatRepository extends Repository {
 			}
 			return $textString;
 		} else {
-			return "0 results";
+			return "-keine Nachrichten-";
 		}
 	}
-	public function textSpeichern($text) {
-	
+	public function textSpeichern($text, $id) {
 		$sql = "INSERT INTO techtalk.text (text) VALUES (?)";
-	
+		
 		$statement = ConnectionHandler::getConnection ()->prepare ( $sql );
-	
-		$statement->bind_param ( 's', $text);
-	
+		
+		$statement->bind_param ( 's', $text );
+		
 		if (! $statement->execute ()) {
 			throw new Exception ( $statement->error );
 		}
-	
+		
 		return $statement->insert_id;
 	}
 }
