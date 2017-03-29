@@ -17,6 +17,7 @@ class UserRepository extends Repository {
 		
 		return $statement->insert_id;
 	}
+	
 	public function benutzerBearbeiten($id, $benutzername, $passwort, $email) {
 		$sql = "UPDATE techtalk.kunde SET benutzername = ?, email = ?, passwort =? WHERE id=? ;";
 		
