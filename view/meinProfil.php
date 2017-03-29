@@ -8,7 +8,8 @@
 			<div class="col-lg-8">
 				<input class="form-control" id="accountBearbeitenEmail"
 					name="accountBearbeitenEmail" type="text"
-					onkeyup="accountBearbeitenUeberpruefung()" placeholder="<?php echo $_SESSION['email'];?>">
+					onkeyup="accountBearbeitenUeberpruefung()"
+					placeholder="<?php echo $_SESSION['email'];?>">
 			</div>
 		</div>
 		<div class="form-group">
@@ -16,7 +17,7 @@
 			<div class="col-md-8">
 				<input class="form-control" type="text"
 					id="accountBearbeitenBenutzername"
-					name="accountBearbeitenBenutzername" 
+					name="accountBearbeitenBenutzername"
 					onkeyup="accountBearbeitenUeberpruefung()"
 					placeholder="<?php echo $_SESSION['benutzername'];?>">
 			</div>
@@ -25,8 +26,8 @@
 			<label class="col-md-3 control-label">neues Password:</label>
 			<div class="col-md-8">
 				<input class="form-control" name="accountBearbeitenPasswort"
-					id="accountBearbeitenPasswort" onchange="accountBearbeitenUeberpruefung()"
-					type="password">
+					id="accountBearbeitenPasswort"
+					onchange="accountBearbeitenUeberpruefung()" type="password">
 			</div>
 		</div>
 		<div class="form-group">
@@ -39,16 +40,25 @@
 			</div>
 		</div>
 		<div id="bearbeiteWarnung"></div>
-			<div id="warnung"></div>
-				<div class="form-group">
-					<label class="col-md-3 control-label"></label>
-					<div class="col-md-8">
-						<input type="submit" class="btn btn-primary"
-							value="Änderungen Speichern"> <span></span> <a href="/" class="btn btn-info" style="background-color: white; color: black; border-color: black;">Abbrechen</a>
-					</div>
-				</div>
+		<div style="color: red; text-align:center;"id="warnung"></div>
+		<div class="form-group">
+			<label class="col-md-3 control-label"></label>
+			<div class="col-md-8">
+				<input type="submit" class="btn btn-primary"
+					value="Änderungen Speichern"> <span></span> <a href="/"
+					class="btn btn-info"
+					style="background-color: white; color: black; border-color: black;">Abbrechen</a>
+			</div>
 	
 	</form>
+	<form class="form-horizontal form-group" method="post"
+		action="/user/profilLoeschen">
+		<button type="submit" class="btn btn-default"
+			style="color: white; float: right; background-color: red">Profil
+			Löschen</button>
+
+	</form>
+</div>
 </div>
 
 <hr>

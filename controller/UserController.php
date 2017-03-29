@@ -1,19 +1,8 @@
 <?php
 require_once '../repository/UserRepository.php';
 require_once '../repository/LoginResult.php';
-/**
- * Siehe Dokumentation im DefaultController.
- */
+
 class UserController {
-	public function index() {
-		$userRepository = new UserRepository ();
-		
-		$view = new View ( 'index' );
-		$view->title = 'Startseite';
-		$view->heading = 'Startseite';
-		$view->users = $userRepository->readAll ();
-		$view->display ();
-	}
 	public function meinProfil() {
 		$view = new View ( 'meinProfil' );
 		$view->title = 'Mein Profil';
@@ -83,9 +72,9 @@ class UserController {
 	}
 	public function profilLoeschen() {
 		$userRepository = new UserRepository ();
-		$userRepository->deleteById ( $_SESSION ['id'] );
+		$userRepository->deleteById( $_SESSION ['id'] );
 		
 		// Anfrage an die URI /user weiterleiten (HTTP 302)
-		header ( 'Location: /user' );
+		header ( 'Location: /' );
 	}
 }
