@@ -51,7 +51,8 @@
 						<ul class="dropdown-menu">
 							<li><a href="/chat/chatErstellen?name=bitcoin&chat_id=1">Bitcoin</a></li>
 							<li><a href="/chat/chatErstellen?name=dronen&chat_id=2">Dronen</a></li>
-							<li><a href="/chat/chatErstellen?name=Huawei P10&chat_id=3">Huawei P10</a></li>
+							<li><a href="/chat/chatErstellen?name=Huawei P10&chat_id=3">Huawei
+									P10</a></li>
 							<li role="separator" class="divider"></li>
 							<li class="dropdown-header">Admin</li>
 							<li><a href="#">Admin Chat</a></li>
@@ -60,28 +61,23 @@
 					<?php
 					
 					if (isset ( $username )) {
-						echo '<li><a href="/user/meinProfil"><p>Mein Profil</p></a></li>'; 
+						echo '<li><a href="/user/meinProfil"><p>Mein Profil</p></a></li>';
 					} else {
 						echo "";
 					}
 					?>
-					
-
-				
-				
-				</ul>
-				<p style="float: right;">
-				
 				<?php
 				
 				if (isset ( $username )) {
-					echo "sie sind eingeloggt als:" . $username;
+					echo "<li><a><p>Eingeloggt als: " . $username . "</p></a></li>";
 				} else {
 					echo "";
 				}
-				?></p>
+				?>
+				
+				
+				</ul>
 			</div>
-
 		</div>
 	</nav>
 	<main> <script>
