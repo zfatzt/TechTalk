@@ -45,7 +45,7 @@ class ConnectionHandler
     public static function getConnection()
     {
         // Prüfen ob bereits eine Verbindung existiert
-        if (self::$connection === null) {
+//         if (self::$connection === null && self::$connection->stat === null) {
 
             // Konfigurationsdatei auslesen
             $config = require '../config.php';
@@ -62,7 +62,7 @@ class ConnectionHandler
             }
 
             self::$connection->set_charset('utf8');
-        }
+//         }
 
         // Verbindung zurückgeben
         return self::$connection;

@@ -1,4 +1,3 @@
-
 <?php
 require_once '../repository/UserRepository.php';
 require_once '../repository/LoginResult.php';
@@ -29,19 +28,19 @@ class UserController {
 		if (isset ( $_POST ["accountBearbeitenEmail"] )) {
 			$neueEmail = $_POST ["accountBearbeitenEmail"];
 		} else {
-			$neueEmail = $_SESSION["email"];
+			$neueEmail = $_SESSION ["email"];
 		}
 		
 		if (isset ( $_POST ["accountBearbeitenBenutzername"] )) {
 			$neuerBenutzername = $_POST ["accountBearbeitenBenutzername"];
-		}else {
-			$neuerBenutzername = $_SESSION["benutzername"];
+		} else {
+			$neuerBenutzername = $_SESSION ["benutzername"];
 		}
 		
 		if (isset ( $_POST ["accountBearbeitenPasswort"] )) {
 			$neuesPasswort = $_POST ["accountBearbeitenPasswort"];
-		}else {
-			$neuesPasswort = $_SESSION["passwort"];
+		} else {
+			$neuesPasswort = $_SESSION ["passwort"];
 		}
 		
 		if (isset ( $_POST ["accountBearbeitenPasswortWiederholen"] )) {
@@ -82,11 +81,9 @@ class UserController {
 					</script>";
 		}
 	}
-
-
 	public function profilLoeschen() {
 		$userRepository = new UserRepository ();
-		$userRepository->deleteById ($_SESSION['id'] );
+		$userRepository->deleteById ( $_SESSION ['id'] );
 		
 		// Anfrage an die URI /user weiterleiten (HTTP 302)
 		header ( 'Location: /user' );
