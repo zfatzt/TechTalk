@@ -1,5 +1,5 @@
 <?php
-require_once '../lib/Repository.php';
+require_once '../lib/Repository.php';require_once '../lib/Repository.php';
 class UserRepository extends Repository {
 	protected $kunde = 'user';
 	public function benutzerErstellen($benutzername, $email, $passwort) {
