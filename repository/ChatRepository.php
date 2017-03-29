@@ -22,7 +22,7 @@ class ChatRepository extends Repository {
 		if ($result->num_rows > 0) {
 			// output data of each row
 			while ( $row = $result->fetch_assoc () ) {
-				$textString = $textString . $userRepo->kundennameAuslesen($row["kunde_id"]). ": " . $row ["text"] . "<br>";
+				$textString = $textString . "<strong>".$userRepo->kundennameAuslesen($row["kunde_id"]). ":</strong> " . $row ["text"] . "<br>";
 			}
 			return $textString;
 		} else {
