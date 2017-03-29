@@ -53,11 +53,11 @@
  <script>
 	function refresh(){
 	    var xmlhttp = new XMLHttpRequest();
-	    xmlhttp.open('GET','/chat/chatSenden', true);
+	    xmlhttp.open('POST','/chat/chatSenden?name=<?=$name ?>&chat_id=<?=$chat_id?>', true);
 	    xmlhttp.onreadystatechange=function(){
 	       if (xmlhttp.readyState == 4){
 	          if(xmlhttp.status == 200){
-	             alert(xmlhttp.responseText);
+// 	             alert(xmlhttp.responseText);
 	         }
 	       }
 	    };
