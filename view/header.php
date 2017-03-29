@@ -15,7 +15,7 @@
 
 
 <link href="/css/style.css" rel="stylesheet">
-
+<link rel="icon" href="images/t.ico">
 </head>
 <body>
 	<nav class="navbar navbar-fixed-top navbar-inverse">

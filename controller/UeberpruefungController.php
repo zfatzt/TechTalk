@@ -16,6 +16,7 @@ class UeberpruefungController {
 				$_SESSION ['id'] = $loginResult->getId ();
 				$_SESSION ['passwort'] = $loginResult->getPasswort ();
 				$_SESSION ['email'] = $loginResult->getEmail ();
+				$_SESSION ['eingabe'] = "";
 				header ( "Location: /" );
 			} else {
 				
