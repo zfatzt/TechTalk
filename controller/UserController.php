@@ -45,8 +45,6 @@ class UserController {
 		
 		if (isset ( $_POST ["accountBearbeitenPasswortWiederholen"] )) {
 			$neuesPasswortWiederholen = $_POST ["accountBearbeitenPasswortWiederholen"];
-		}else {
-			$neuesPasswortWiederholen = $_SESSION["passwort"];
 		}
 		
 		if (filter_var ( $neueEmail, FILTER_VALIDATE_EMAIL )) {
