@@ -1,3 +1,21 @@
+<?php if(!isset($_SESSION["id"])){ 
+	$view = new View ( 'default_index' );
+	$view->title = 'Bitte Anmelden';
+	$view->heading = '';
+	$view->tablogin = false;
+	$view->display ();
+
+	
+	
+	echo "<script>document.getElementById('loginFehler').innerHTML = 'Bitte Einloggen oder Registrieren'
+			document.getElementById('serverWarnung').innerHTML = 'Bitte Einloggen oder Registrieren';
+						document.getElementById('login').click();
+						</script>";
+	
+	$_SESSION["id"] = null;
+	
+	}else {?> 
+	
 <div id="chat" class="row">
 	<h3><?=$title ?></h3>
 	<div class="links col">
@@ -30,3 +48,11 @@
 		</div>
 	</div>
 </div>
+		
+ <?php }?>
+
+
+
+
+
+

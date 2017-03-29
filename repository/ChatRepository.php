@@ -19,13 +19,14 @@ class ChatRepository extends Repository {
 		if ($result->num_rows > 0) {
 			// output data of each row
 			while ( $row = $result->fetch_assoc () ) {
-				$textString = $textString. "Kevin: " . $row ["text"] . "<br>";
+				$textString = $textString . $row ["text"] . "<br>";
 			}
 			return $textString;
 		} else {
 			return "-keine Nachrichten-";
 		}
 	}
+	
 	public function textSpeichern($text) {
 		$sql = "INSERT INTO techtalk.text (text) VALUES (?)";
 		

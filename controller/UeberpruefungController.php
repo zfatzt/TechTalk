@@ -31,6 +31,7 @@ class UeberpruefungController {
 			}
 		}
 	}
+	
 	public function registrieren() {
 		if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 			

@@ -36,6 +36,12 @@ label.checkbox {
 	margin-left: 20px;
 }
 
+#warnung {
+	color: red;
+	text-align: center;
+}
+
+
 .modal-dialog {
 	width: 200px;
 }
