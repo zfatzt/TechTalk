@@ -44,7 +44,7 @@
 					<label class="col-md-3 control-label"></label>
 					<div class="col-md-8">
 						<input type="submit" class="btn btn-primary"
-							value="Änderungen Speichern"> <span></span> <a href="/"><button type="button" class="btn btn-default" data-dismiss="modal">Abbrechen</a></button>
+							value="Änderungen Speichern"> <span></span> <a href="/" class="btn btn-info" style="background-color: white; color: black; border-color: black;">Abbrechen</a>
 					</div>
 				</div>
 	

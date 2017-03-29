@@ -15,8 +15,8 @@
 					<h1>Bitcoin Talk</h1>
 					<p>Was haltest du von Bitcoins ?</p>
 					<p>
-						<a class="btn btn-lg btn-primary" href="/chat/chatErstellen?name=bitcoin&chat_id=1"
-							role="button">Chatten</a>
+						<a class="btn btn-lg btn-primary"
+							href="/chat/chatErstellen?name=bitcoin&chat_id=1" role="button">Chatten</a>
 					</p>
 				</div>
 			</div>
@@ -28,7 +28,8 @@
 					<h1>Dronen Talk</h1>
 					<p>Dronen sind noch nicht sehr lange auf dem Markt.</p>
 					<p>
-						<a class="btn btn-lg btn-primary" href="/chat/chatErstellen?name=dronen&chat_id=2"  role="button">Chatten</a>
+						<a class="btn btn-lg btn-primary"
+							href="/chat/chatErstellen?name=dronen&chat_id=2" role="button">Chatten</a>
 					</p>
 				</div>
 			</div>
@@ -42,7 +43,9 @@
 					<p>Das neue Huawei P10 ist raus. Was haltest du von dem Smartphone
 						?</p>
 					<p>
-						<a class="btn btn-lg btn-primary" href="/chat/chatErstellen?name=Huawei P10&chat_id=3" role="button">Chatten </a>
+						<a class="btn btn-lg btn-primary"
+							href="/chat/chatErstellen?name=HuaweiP10&chat_id=3" role="button">Chatten
+						</a>
 					</p>
 				</div>
 			</div>
@@ -60,32 +63,12 @@
 
 <div class="textfield">
 	<h3>Tech Talk</h3>
-	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-	nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-	sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-	rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-	ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-	elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-	aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-	dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-	est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-	sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-	dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-	et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-	takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum
-	iriure dolor in hendrerit in vulputate velit esse molestie consequat,
-	vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et
-	iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
-	duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
-	consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-	ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-	veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-	ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
-	hendrerit in vulputate velit esse molestie consequat, vel illum dolore
-	eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-	dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
-	te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend
-	option congue nihil imperdiet doming id quod mazim placerat facer
+	Hallo! Herzlich willkommen auf der Webseite Tech Talk Diese Webseite
+	ist ein Forum für Alte und Junge. Wir hoffen das ihnen unsere Webseite
+	gefällt und ihnen weiterhilft. Falls Sie Themen Vorschläge haben,
+	senden Sie uns diese doch per email (die E-Mail finden Sie unter
+	kontakt). Vielen Dank und viel Spass beim Chatten!
+
 
 </div>
 <div class="parallax2"></div>

@@ -32,7 +32,7 @@
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li ><a href="/"><p>Home</p></a></li>
+					<li><a href="/"><p>Home</p></a></li>
 					<li>
 					<?php
 					
@@ -52,7 +52,7 @@
 						<ul class="dropdown-menu">
 							<li><a href="/chat/chatErstellen?name=bitcoin&chat_id=1">Bitcoin</a></li>
 							<li><a href="/chat/chatErstellen?name=dronen&chat_id=2">Dronen</a></li>
-							<li><a href="/chat/chatErstellen?name=Huawei P10&chat_id=3">Huawei
+							<li><a href="/chat/chatErstellen?name=HuaweiP10&chat_id=3">Huawei
 									P10</a></li>
 							<li role="separator" class="divider"></li>
 							<li class="dropdown-header">Admin</li>
@@ -77,11 +77,13 @@
 				?>
 				
 				
+				
+				
 				</ul>
 			</div>
 		</div>
 	</nav>
-	<main> <script>
+<script>
 	function logout(){
 	    var xmlhttp = new XMLHttpRequest();
 	    xmlhttp.open('GET','/logout/', true); 
@@ -95,3 +97,4 @@
 	    xmlhttp.send(null);
 	}
 </script>
+<main>

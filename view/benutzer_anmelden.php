@@ -1,6 +1,6 @@
 <!-- Modal -->
 <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1"
-	role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	role="dialog" aria-hidden="true">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<br>
@@ -25,18 +25,17 @@
 									<label class="control-label" for="anmeldeEmail">Email:</label>
 									<div class="controls">
 										<input required="" id="anmeldeEmail" name="anmeldeEmail"
-											type="email" class="form-control"
-											placeholder="max@mustermann.ch" class="input-medium"
-											required="">
+											type="email" placeholder="max@mustermann.ch"
+											class="input-medium form-control">
 									</div>
 								</div>
 								<!-- Password input-->
 								<div class="control-group">
-									<label class="control-label" for="passwordinput">Passwort:</label>
+									<label class="control-label" for="anmeldePasswort">Passwort:</label>
 									<div class="controls">
 										<input required="" id="anmeldePasswort" name="anmeldePasswort"
-											class="form-control" type="password" placeholder="********"
-											class="input-medium">
+											class="form-control input-medium" type="password"
+											placeholder="********">
 									</div>
 								</div>
 
@@ -44,8 +43,8 @@
 								<div class="control-group">
 									<label class="checkbox" for="rememberme"></label>
 									<div class="controls">
-										<label class="checkbox" for="rememberme-0"> <input
-											type="checkbox" name="rememberme" id="rememberme-0"
+										<label class="checkbox" for="rememberme"> <input
+											type="checkbox" name="rememberme" id="rememberme"
 											value="Remember me"> Angemeldet bleiben
 										</label>
 									</div>
@@ -53,9 +52,9 @@
 
 								<!-- Button -->
 								<div class="control-group">
-									<label class="control-label" for="signin"></label>
+									<label class="control-label" for="signinButton"></label>
 									<div class="controls">
-										<button id="signin" type="submit" name="signin"
+										<button id="signinButton" type="submit" name="signinButton"
 											class="btn btn-success">Einloggen</button>
 									</div>
 									<div id="loginFehler"></div>
@@ -78,9 +77,9 @@
 								<div class="control-group">
 									<label class="control-label" for="email">Email:</label>
 									<div class="controls">
-										<input id="email" name="email" class="form-control"
+										<input id="email" name="email"
 											type="email" placeholder="max@mustermann.ch"
-											class="input-large" required="" onkeyup="ueberpruefung()">
+											class="input-large form-control" required="" onkeyup="ueberpruefung()">
 									</div>
 								</div>
 
@@ -90,8 +89,8 @@
 										<label class="control-label" for="benutzername">Benutzername:</label>
 										<div class="controls">
 											<input id="benutzername" name="benutzername"
-												class="form-control" type="text" placeholder="Max457"
-												class="input-large" required="" onkeyup="ueberpruefung()">
+												 type="text" placeholder="Max457"
+												class="input-large form-control" required="" onkeyup="ueberpruefung()">
 										</div>
 									</div>
 
@@ -101,8 +100,8 @@
 									<div class="control-group">
 										<label class="control-label" for="password">Passwort:</label>
 										<div class="controls">
-											<input id="password" name="password" class="form-control"
-												type="password" placeholder="********" class="input-large"
+											<input id="password" name="password"
+												type="password" placeholder="********" class="input-large form-control"
 												onkeyup="ueberpruefung()"> <em>1-8 Characters</em>
 										</div>
 									</div>
@@ -112,9 +111,9 @@
 										<label class="control-label" for="reenterpassword"
 											onkeyup="ueberpruefung()"> Passwort wiederholen:</label>
 										<div class="controls">
-											<input id="reenterpassword" class="form-control"
+											<input id="reenterpassword"
 												name="reenterpassword" type="password"
-												placeholder="********" class="input-large" required=""
+												placeholder="********" class="input-large form-control" required=""
 												onkeyup="ueberpruefung()">
 										</div>
 									</div>
@@ -140,8 +139,6 @@
 										<span style="color: red" id="warnung"></span> <input
 											type="submit" value="Registrieren" id="confirmsignup"
 											name="confirmsignup" class="btn btn-success">
-
-										</button>
 										<div>
 											<span id="serverWarnung"></span>
 										</div>
@@ -153,22 +150,14 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<center>
+				<div style="text-allign:center;">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Abbrechen</button>
-				</center>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 <script>
-
-$( document ).ready(function() {
-
-	// Read url
-	
-	
-});
-
 function ueberpruefung() {
 	document.getElementById("warnung").innerHTML = "";
 	var name = document.getElementById("benutzername").value;
@@ -191,5 +180,3 @@ function ueberpruefung() {
 }
 
 </script>
-</body>
-</html>
