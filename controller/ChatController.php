@@ -1,6 +1,6 @@
 <?php
-require '../repository/ChatRepository.php';
 require '../repository/UserRepository.php';
+require '../repository/ChatRepository.php';
 class ChatController {
 	public function chatErstellen() {
 		$name = $_GET ["name"];
@@ -476,7 +476,7 @@ class ChatController {
 					"willies",
 					"willy",
 					"xrated",
-					"xxx"
+					"xxx" 
 			);
 			if (in_array ( $_POST ["nachrichtText"], $array ) != false) {
 				echo '<script>alert("Bitte keine Schimpfwörter!")</script>';
@@ -495,6 +495,7 @@ class ChatController {
 			}
 			$this->chatErstellen ();
 		} else {
+			$this->chatErstellen ();
 		}
 	}
 }

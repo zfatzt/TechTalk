@@ -37,7 +37,7 @@
 				<div class="input-group">
 					<input type="text" class="form-control"
 						placeholder="Nachricht eingeben..." id="nachrichtText"
-						name="nachrichtText"> <span class="input-group-btn">
+						name="nachrichtText" <?php if (isset($value)) { ?>  echo "value='$value'" <?php } ?>   > <span class="input-group-btn">
 						<button id="absendenButton" class="btn btn-success" type="submit">
 							<span class="glyphicon glyphicon-send" onclick="refresh()"></span>
 						</button>
@@ -53,11 +53,11 @@
  <script>
 	function refresh(){
 	    var xmlhttp = new XMLHttpRequest();
-	    xmlhttp.open('POST','/chat/chatSenden?name=<?=$name ?>&chat_id=<?=$chat_id?>', true);
+	    xmlhttp.open('GET','/chat/chatSenden', true);
 	    xmlhttp.onreadystatechange=function(){
 	       if (xmlhttp.readyState == 4){
 	          if(xmlhttp.status == 200){
-// 	             alert(xmlhttp.responseText);
+	             alert(xmlhttp.responseText);
 	         }
 	       }
 	    };
