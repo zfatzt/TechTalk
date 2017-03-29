@@ -82,9 +82,11 @@ class UserController {
 					</script>";
 		}
 	}
-	public function delete() {
+
+
+	public function profilLoeschen() {
 		$userRepository = new UserRepository ();
-		$userRepository->deleteById ( $_GET ['id'] );
+		$userRepository->deleteById ($_SESSION['id'] );
 		
 		// Anfrage an die URI /user weiterleiten (HTTP 302)
 		header ( 'Location: /user' );
