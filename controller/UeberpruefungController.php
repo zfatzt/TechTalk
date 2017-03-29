@@ -24,7 +24,7 @@ class UeberpruefungController {
 				$view->heading = '';
 				$view->tablogin = true;
 				$view->display ();
-				
+				 
 				echo "<script>document.getElementById('loginFehler').innerHTML = 'Login Fehlgeschlagen';
 						document.getElementById('login').click();
 						</script>";

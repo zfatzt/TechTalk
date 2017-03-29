@@ -60,7 +60,7 @@
 					<?php
 					
 					if (isset ( $username )) {
-						echo '<li><a href="/user/meinProfil"><p>Mein Profil</p></a></li>';
+						echo '<li><a href="/user/meinProfil"><p>Mein Profil</p></a></li>'; 
 					} else {
 						echo "";
 					}

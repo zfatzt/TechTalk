@@ -22,7 +22,7 @@ class ChatController {
 		$chatRepo = new ChatRepository ();
 		$alleNachrichten = $chatRepo->textAuslesen ( $chat_id );
 		$view->alleNachrichten = $alleNachrichten;
-		$view->display ();
+		$view->display (); 
 	}
 	public function chatSenden() {
 		if (isset ( $_POST ["nachrichtText"] ) && ! empty ( $_POST ["nachrichtText"] )) {

@@ -23,7 +23,7 @@ class UserController {
 			$view->username = $_SESSION ['benutzername'];
 		}
 		$view->display ();
-	}
+	} 
 	public function profilBearbeiten() {
 		if (isset ( $_POST ["accountBearbeitenEmail"] )) {
 			$neueEmail = $_POST ["accountBearbeitenEmail"];

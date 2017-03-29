@@ -39,7 +39,7 @@
 						placeholder="Nachricht eingeben..." id="nachrichtText"
 						name="nachrichtText"> <span class="input-group-btn">
 						<button id="absendenButton" class="btn btn-success" type="submit">
-							<span class="glyphicon glyphicon-send"></span>
+							<span class="glyphicon glyphicon-send" onclick="refresh()"></span>
 						</button>
 					</span>
 				</div>
@@ -53,7 +53,7 @@
  <script>
 	function refresh(){
 	    var xmlhttp = new XMLHttpRequest();
-	    xmlhttp.open('GET','/logout/', true);
+	    xmlhttp.open('GET','/chat/chatSenden', true);
 	    xmlhttp.onreadystatechange=function(){
 	       if (xmlhttp.readyState == 4){
 	          if(xmlhttp.status == 200){
