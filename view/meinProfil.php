@@ -8,7 +8,7 @@
 			<div class="col-lg-8">
 				<input class="form-control" id="accountBearbeitenEmail"
 					name="accountBearbeitenEmail" type="text"
-					onkeyup="accountBearbeitenUeberpruefung()" placeholder="<?php echo $_SESSION['email'];?>">
+					onkeyup="accountBearbeitenUeberpruefung()" value="<?php echo $_SESSION['email'];?>">
 			</div>
 		</div>
 		<div class="form-group">
@@ -18,7 +18,7 @@
 					id="accountBearbeitenBenutzername"
 					name="accountBearbeitenBenutzername" 
 					onkeyup="accountBearbeitenUeberpruefung()"
-					placeholder="<?php echo $_SESSION['benutzername'];?>">
+					value="<?php echo $_SESSION['benutzername'];?>">
 			</div>
 		</div>
 		<div class="form-group">
@@ -63,6 +63,7 @@ function accountBearbeitenUeberpruefung() {
 	if(name.length < 2) {
 		document.getElementById("warnung").innerHTML = "Der Benutzername ist zu kurz <br/>";
 	}
+
 	if(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email) == false) {
 		document.getElementById("warnung").innerHTML = document.getElementById("warnung").innerHTML + "E-Mail Adresse ist ungültig!<br/>";
 	}
