@@ -495,6 +495,7 @@ class ChatController {
 			}
 			$this->chatErstellen ();
 		} else {
+			$this->chatErstellen ();
 		}
 	}
 }
