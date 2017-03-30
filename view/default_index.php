@@ -67,7 +67,26 @@
 	ist ein Forum für Alte und Junge. Wir hoffen das ihnen unsere Webseite
 	gefällt und ihnen weiterhilft. Falls Sie Themen Vorschläge haben,
 	senden Sie uns diese doch per email (die E-Mail finden Sie unter
-	kontakt). Vielen Dank und viel Spass beim Chatten!
+	kontakt). Vielen Dank und viel Spass beim Chatten!allo! Herzlich
+	willkommen auf der Webseite Tech Talk Diese Webseite ist ein Forum für
+	Alte und Junge. Wir hoffen das ihnen unsere Webseite gefällt und ihnen
+	weiterhilft. Falls Sie Themen Vorschläge haben, senden Sie uns diese
+	doch per email (die E-Mail finden Sie unter kontakt). Vielen Dank und
+	viel Spass beim Chatten!allo! Herzlich willkommen auf der Webseite Tech
+	Talk Diese Webseite ist ein Forum für Alte und Junge. Wir hoffen das
+	ihnen unsere Webseite gefällt und ihnen weiterhilft. Falls Sie Themen
+	Vorschläge haben, senden Sie uns diese doch per email (die E-Mail
+	finden Sie unter kontakt). Vielen Dank und viel Spass beim
+	Chatten!allo! Herzlich willkommen auf der Webseite Tech Talk Diese
+	Webseite ist ein Forum für Alte und Junge. Wir hoffen das ihnen unsere
+	Webseite gefällt und ihnen weiterhilft. Falls Sie Themen Vorschläge
+	haben, senden Sie uns diese doch per email (die E-Mail finden Sie unter
+	kontakt). Vielen Dank und viel Spass beim Chatten!allo! Herzlich
+	willkommen auf der Webseite Tech Talk Diese Webseite ist ein Forum für
+	Alte und Junge. Wir hoffen das ihnen unsere Webseite gefällt und ihnen
+	weiterhilft. Falls Sie Themen Vorschläge haben, senden Sie uns diese
+	doch per email (die E-Mail finden Sie unter kontakt). Vielen Dank und
+	viel Spass beim Chatten!
 
 
 </div>
