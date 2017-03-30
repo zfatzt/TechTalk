@@ -22,7 +22,7 @@ class ChatRepository extends Repository {
 		if ($result->num_rows > 0) {
 			// output data of each row
 			while ( $row = $result->fetch_assoc () ) {
-				$textString = $textString . "<strong>".$userRepo->kundennameAuslesen($row["kunde_id"]). ":</strong> " . $row ["text"] . "<br>";
+				$textString = $textString . "<strong>" . $userRepo->kundennameAuslesen ( $row ["kunde_id"] ) . ":</strong> " . $row ["text"] . "<br>";
 			}
 			return $textString;
 		} else {
@@ -52,6 +52,23 @@ class ChatRepository extends Repository {
 		if (! $statement->execute ()) {
 			throw new Exception ( $statement->error );
 		}
+	}
+	public function zeitAuslesen($id) {
+		$sql = "select max(time) from chat_text_user where kunde_id=?;";
+		
+		$statement = ConnectionHandler::getConnection ()->prepare ( $sql );
+		
+		$statement->bind_param ( 'i', $id );
+		
+		if (! $statement->execute ()) {
+			throw new Exception ( $statement->error );
+		}
+	
+		$result = $statement->get_result ();
+		$row = $result->fetch_assoc ();
+		$benutzername = $row ["max(time)"];
+		
+		return $benutzername;
 	}
 }
 ?>

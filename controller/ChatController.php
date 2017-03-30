@@ -26,9 +26,23 @@ class ChatController {
 		$view->display ();
 	}
 	public function chatSenden() {
+		$chatRepo = new ChatRepository();
+		$damaligeZeit = $chatRepo->zeitAuslesen($_SESSION["id"]);
+		
+		
+		$timestampOld = strtotime($damaligeZeit);
+		
+		
+		$zeit = new DateTime ();
+		
+		$timestamp = $zeit->getTimestamp();
+		
+		$diff = $timestamp- $timestampOld;
+		
+		if ($diff > 2){
+		
 		if (isset ( $_POST ["nachrichtText"] ) && ! empty ( $_POST ["nachrichtText"] )) {
 			$config = new woerterConfig ();
-			
 			if (in_array ( $_POST ["nachrichtText"], $config->fluchwortArray () ) != false) {
 				echo '<script>alert("Bitte keine Schimpfwörter!")</script>';
 			} else {
@@ -47,7 +61,12 @@ class ChatController {
 			$this->chatErstellen ();
 		} else {
 			$this->chatErstellen ();
+		
 		}
+	
+	 }else{
+	 	echo '<script>alert("Bitte diese Seite nicht spamen!")</script>';
+	 }
 	}
 }
 ?>
