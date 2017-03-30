@@ -2,7 +2,6 @@
 require '../repository/UserRepository.php';
 require '../repository/ChatRepository.php';
 require '../woerterConfig.php';
-
 class ChatController {
 	public function chatErstellen() {
 		$name = $_GET ["name"];

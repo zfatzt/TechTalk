@@ -52,12 +52,8 @@
 						<ul class="dropdown-menu">
 							<li><a href="/chat/chatErstellen?name=bitcoin&chat_id=1">Bitcoin</a></li>
 							<li><a href="/chat/chatErstellen?name=dronen&chat_id=2">Dronen</a></li>
-							<li><a href="/chat/chatErstellen?name=HuaweiP10&chat_id=3">Huawei
+							<li><a href="/chat/chatErstellen?name=Huawei P10&chat_id=3">Huawei
 									P10</a></li>
-							<li role="separator" class="divider"></li>
-							<li class="dropdown-header">Admin</li>
-							<li><a href="#">Admin Chat</a></li>
-							<li><a href="#">Support</a></li>
 						</ul>
 					<?php
 					
@@ -79,8 +75,10 @@
 				
 				
 				
+				
+				
 				</ul>
 			</div>
 		</div>
 	</nav>
-<main>
+	<main>
