@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title><?= $title ?> | Laurent Tech</title>
+<meta name="description" content="I like trains">
+<title><?= $title ?> | Tech Talk</title>
 
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet"
@@ -83,18 +83,4 @@
 			</div>
 		</div>
 	</nav>
-<script>
-	function logout(){
-	    var xmlhttp = new XMLHttpRequest();
-	    xmlhttp.open('GET','/logout/', true); 
-	    xmlhttp.onreadystatechange=function(){
-	       if (xmlhttp.readyState == 4){
-	          if(xmlhttp.status == 200){
-	             alert(xmlhttp.responseText);
-	         }
-	       }
-	    };
-	    xmlhttp.send(null);
-	}
-</script>
 <main>
