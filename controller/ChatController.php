@@ -14,6 +14,7 @@ class ChatController {
 		if (isset ( $_SESSION ["benutzername"] )) {
 			$view->username = $_SESSION ["benutzername"];
 		}
+		$view->active = 'chat';
 		$view->kunde_id = $_SESSION ["id"];
 		$view->name = $name;
 		$view->chat_id = $chat_id;

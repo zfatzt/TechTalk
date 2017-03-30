@@ -8,6 +8,7 @@ class UeberunsController {
 		if (isset ( $_SESSION ['benutzername'] )) {
 			$view->username = $_SESSION ['benutzername'];
 		}
+		$view->active = 'ueberuns';
 		$view->display ();
 	}
 }

@@ -11,6 +11,7 @@ class UserController {
 		if (isset ( $_SESSION ['benutzername'] )) {
 			$view->username = $_SESSION ['benutzername'];
 		}
+		$view->active = 'meinProfil';
 		$view->display ();
 	} 
 	public function profilBearbeiten() {

@@ -30,23 +30,45 @@
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="/"><p>Home</p></a></li>
+					<li
+						<?php
+						if (strcmp ( 'home', $active ) == 0) {
+							echo 'class=active';
+						}
+						?>><a href="/"><p>Home</p></a></li>
 					<li>
 					<?php
-					
 					if (isset ( $username )) {
 						echo '<a href="/" onclick="logout()" ><p>Logout</p></a>';
 					} else {
-						echo '<a href="#signup" id="login" data-toggle="modal"
+						echo '<a href="#signup" id="login" data-toggle="modal"+
 						data-target=".bs-modal-sm"><p>Login</p></a>';
 					}
 					?>
 					</li>
-					<li><a href="/ueberuns/ueberuns"><p>Über uns</p></a></li>
-					<li><a href="/ueberuns/ueberuns"><p>Kontakt</p></a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false">Chats<span class="caret"></span></a>
+					<li
+						<?php
+						
+						if (strcmp ( 'ueberuns', $active ) == 0) {
+							echo 'class=active';
+						}
+						?>><a href="/ueberuns/ueberuns"><p>Über uns</p></a></li>
+					<li
+						<?php
+						
+						if (strcmp ( 'kontakt', $active ) == 0) {
+							echo 'class=active';
+						}
+						?>><a href="/ueberuns/ueberuns"><p>Kontakt</p></a></li>
+					<li class="dropdown"
+						<?php
+						
+						if (strcmp ( 'chat', $active ) == 0) {
+							echo 'class=active';
+						}
+						?>><a href="#" class="dropdown-toggle" data-toggle="dropdown"
+						role="button" aria-haspopup="true" aria-expanded="false">Chats<span
+							class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="/chat/chatErstellen?name=bitcoin&chat_id=1">Bitcoin</a></li>
 							<li><a href="/chat/chatErstellen?name=dronen&chat_id=2">Dronen</a></li>
@@ -56,7 +78,16 @@
 					<?php
 					
 					if (isset ( $username )) {
-						echo '<li><a href="/user/meinProfil"><p>Mein Profil</p></a></li>';
+						?>
+
+					
+					<li
+						<?php
+						
+						if (strcmp ( 'meinProfil', $active ) == 0) {
+							echo 'class=active';
+						}
+						?>><a href="/user/meinProfil"><p>Mein Profil</p></a></li>'<?php
 					} else {
 						echo "";
 					}
@@ -70,12 +101,7 @@
 				}
 				?>
 				
-				
-				
-				
-				
-				
-				</ul>
+					</ul>
 			</div>
 		</div>
 	</nav>
