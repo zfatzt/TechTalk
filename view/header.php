@@ -59,7 +59,7 @@
 						if (strcmp ( 'kontakt', $active ) == 0) {
 							echo 'class=active';
 						}
-						?>><a href="/ueberuns/ueberuns"><p>Kontakt</p></a></li>
+						?>><a href="/kontakt/kontakt"><p>Kontakt</p></a></li>
 					<li class="dropdown"
 						<?php
 						
