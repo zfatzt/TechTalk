@@ -56,7 +56,7 @@ class ConnectionHandler {
 		// Verbindung initialisieren
 		self::$connection = new MySQLi ( $host, $username, $password, $database );
 		if (self::$connection->connect_error) {
-			throw new Exception ( "Unsere Server sind momentan offline. Wir bitten um Verzeihung" );
+			header("location: /error");
 		}
 		
 		self::$connection->set_charset ( 'utf8' );
