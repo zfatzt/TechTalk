@@ -1,5 +1,6 @@
 <?php
-require_once '../lib/Repository.php';require_once '../lib/Repository.php';
+require_once '../lib/Repository.php';
+require_once '../lib/Repository.php';
 class UserRepository extends Repository {
 	protected $kunde = 'user';
 	public function benutzerErstellen($benutzername, $email, $passwort) {
@@ -12,7 +13,7 @@ class UserRepository extends Repository {
 		$statement->bind_param ( 'sss', $benutzername, $email, $passwort );
 		
 		if (! $statement->execute ()) {
-			throw new Exception ( $statement->error );
+			throw new Exception ( "Unsere Server sind zurzeit Offline. Wir bitten Sie um entschuldigung" );
 		}
 		
 		return $statement->insert_id;
@@ -25,7 +26,7 @@ class UserRepository extends Repository {
 		$statement->bind_param ( 'sssi', $benutzername, $email, $passwort, $id );
 		
 		if (! $statement->execute ()) {
-			throw new Exception ( $statement->error );
+			throw new Exception ( "Unsere Server sind zurzeit Offline. Wir bitten Sie um entschuldigung" );
 		}
 	}
 	public function existiertNutzer($email, $passwort) {
@@ -42,7 +43,7 @@ class UserRepository extends Repository {
 		$result = $statement->get_result ();
 		
 		if (! $statement->execute ()) {
-			throw new Exception ( $statement->error );
+			throw new Exception ( "Unsere Server sind zurzeit Offline. Wir bitten Sie um entschuldigung" );
 		}
 		
 		$row = $result->fetch_assoc ();
@@ -68,7 +69,7 @@ class UserRepository extends Repository {
 		$result = $statement->get_result ();
 		
 		if (! $statement->execute ()) {
-			throw new Exception ( $statement->error );
+			throw new Exception ( "Unsere Server sind zurzeit Offline. Wir bitten Sie um entschuldigung" );
 		}
 		$userString = "";
 		if ($result->num_rows > 0) {
@@ -93,7 +94,7 @@ class UserRepository extends Repository {
 		$result = $statement->get_result ();
 		
 		if (! $statement->execute ()) {
-			throw new Exception ( $statement->error );
+			throw new Exception ( "Unsere Server sind zurzeit Offline. Wir bitten Sie um entschuldigung" );
 		}
 		$row = $result->fetch_assoc ();
 		$benutzername = $row ["benutzername"];

@@ -54,6 +54,7 @@ class UserController {
 				$view->title = 'bearbeitung Fehlgeschlagen';
 				$view->heading = '';
 				$view->tablogin = true;
+				$view->active = 'meinProfil';
 				$view->display ();
 				
 				echo "<script>document.getElementById('bearbeiteWarnung').innerHTML = 'Bitte beachten Sie die genannten Vorschriften.';
@@ -65,6 +66,7 @@ class UserController {
 			$view->title = 'bearbeitung Fehlgeschlagen';
 			$view->heading = '';
 			$view->tablogin = true;
+			$view->active = 'meinProfil';
 			$view->display ();
 			
 			echo "<script>document.getElementById('bearbeiteWarnung').innerHTML = 'Bitte beachten Sie die genannten Vorschriften.';

@@ -79,7 +79,7 @@
 					
 					if (isset ( $username )) {
 						?>
-
+					
 					
 					<li
 						<?php

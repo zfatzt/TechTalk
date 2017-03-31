@@ -16,7 +16,7 @@ class ChatRepository extends Repository {
 		$result = $statement->get_result ();
 		
 		if (! $statement->execute ()) {
-			throw new Exception ( $statement->error );
+			throw new Exception ( "Unsere Server sind zurzeit Offline. Wir bitten Sie um entschuldigung" );
 		}
 		$textString = "";
 		if ($result->num_rows > 0) {
@@ -37,7 +37,7 @@ class ChatRepository extends Repository {
 		$statement->bind_param ( 's', $text );
 		
 		if (! $statement->execute ()) {
-			throw new Exception ( $statement->error );
+			throw new Exception ( "Unsere Server sind zurzeit Offline. Wir bitten Sie um entschuldigung" );
 		}
 		
 		return $statement->insert_id;
@@ -50,7 +50,7 @@ class ChatRepository extends Repository {
 		$statement->bind_param ( 'iii', $chat_id, $text_id, $kunde_id );
 		
 		if (! $statement->execute ()) {
-			throw new Exception ( $statement->error );
+			throw new Exception ( "Unsere Server sind zurzeit Offline. Wir bitten Sie um entschuldigung" );
 		}
 	}
 	public function zeitAuslesen($id) {
@@ -61,9 +61,9 @@ class ChatRepository extends Repository {
 		$statement->bind_param ( 'i', $id );
 		
 		if (! $statement->execute ()) {
-			throw new Exception ( $statement->error );
+			throw new Exception ( "Unsere Server sind zurzeit Offline. Wir bitten Sie um entschuldigung" );
 		}
-	
+		
 		$result = $statement->get_result ();
 		$row = $result->fetch_assoc ();
 		$benutzername = $row ["max(time)"];

@@ -21,7 +21,8 @@ class Repository {
 		$statement->bind_param ( 'i', $id );
 		
 		if (! $statement->execute ()) {
-			throw new Exception ( $statement->error );
+			throw new Exception ("Unsere Server sind zurzeit Offline. Wir bitten Sie um entschuldigung");
+				
 		}
 		Repository::deleteById2($id);
 	}
@@ -34,7 +35,8 @@ class Repository {
 		$statement->bind_param ( 'i', $id );
 	
 		if (! $statement->execute ()) {
-			throw new Exception ( $statement->error );
+			throw new Exception ("Unsere Server sind zurzeit Offline. Wir bitten Sie um entschuldigung");
+				
 		}
 		
 	}

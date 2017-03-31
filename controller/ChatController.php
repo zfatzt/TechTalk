@@ -29,18 +29,11 @@ class ChatController {
 	public function chatSenden() {
 		$chatRepo = new ChatRepository();
 		$damaligeZeit = $chatRepo->zeitAuslesen($_SESSION["id"]);
-		
-		
 		$timestampOld = strtotime($damaligeZeit);
-		
-		
 		$zeit = new DateTime ();
-		
 		$timestamp = $zeit->getTimestamp();
-		
 		$diff = $timestamp- $timestampOld;
-		
-		if ($diff > 2){
+		if ($diff > 3){
 		
 		if (isset ( $_POST ["nachrichtText"] ) && ! empty ( $_POST ["nachrichtText"] )) {
 			$config = new woerterConfig ();
