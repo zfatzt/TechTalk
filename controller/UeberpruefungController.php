@@ -24,6 +24,7 @@ class UeberpruefungController {
 				$view->title = 'Anmeldung Fehlgeschlagen';
 				$view->heading = '';
 				$view->tablogin = true;
+				$view->active = 'home';
 				$view->display ();
 				
 				echo "<script>document.getElementById('loginFehler').innerHTML = 'Login Fehlgeschlagen';
@@ -51,6 +52,7 @@ class UeberpruefungController {
 				$view->title = 'Anmeldung fehlgeschlagen';
 				$view->heading = '';
 				$view->tablogin = false;
+				$view->active = 'home';
 				$view->display ();
 				
 				echo "<script>document.getElementById('serverWarnung').innerHTML = 'Bitte beachten Sie die genannten Vorschriften.';

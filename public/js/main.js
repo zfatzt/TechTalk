@@ -58,33 +58,3 @@ function refresh(){
     xmlhttp.send(null);
 }
 */
-
-function aktuelleSeiteHome() {
-	var classChange = document.getElementById("HomeAktuell");
-	classChange.style.class = "active"
-	
-}
-
-function aktuelleSeiteHome() {
-	var classChange = document.getElementById("HomeAktuell");
-	classChange.style.class = "active"
-	
-}
-
-function aktuelleSeiteHome() {
-	var classChange = document.getElementById("HomeAktuell");
-	classChange.style.class = "active"
-	
-}
-
-function aktuelleSeiteHome() {
-	var classChange = document.getElementById("HomeAktuell");
-	classChange.style.class = "active"
-	
-}
-
-function aktuelleSeiteHome() {
-	var classChange = document.getElementById("HomeAktuell");
-	classChange.style.class = "active"
-	
-}
