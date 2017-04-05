@@ -19,7 +19,6 @@ class ChatController {
 			$view->username = $_SESSION ["benutzername"];
 		}
 		$view->active = 'chat';
-		$view->kunde_id = $_SESSION ["id"];
 		$view->name = $name;
 		$view->chat_id = $chat_id;
 		$userRepo = new UserRepository ();
@@ -28,6 +27,7 @@ class ChatController {
 		$chatRepo = new ChatRepository ();
 		$alleNachrichten = $chatRepo->textAuslesen ( $chat_id );
 		$view->alleNachrichten = $alleNachrichten;
+		$view->kunde_id = $_SESSION ["id"];
 		$view->display ();
 	}
 	public function chatAktuallisieren() {

@@ -16,22 +16,30 @@ class UserController {
 	public function profilBearbeiten() {
 		if (isset ( $_POST ["accountBearbeitenEmail"] )) {
 			$neueEmail = $_POST ["accountBearbeitenEmail"];
+		} else {
+			$neueEmail = $_SESSION["email"];
 		}
 		
 		if (isset ( $_POST ["accountBearbeitenBenutzername"] )) {
 			$neuerBenutzername = $_POST ["accountBearbeitenBenutzername"];
+		} else {
+			$neuerBenutzername = $_SESSION ["benutzername"];
 		}
 		
-		if (isset ( $_POST ["accountBearbeitenPasswort"] )) {
+		if (isset ( $_POST ["accountBearbeitenPasswort"] ) && !$_POST["accountBearbeitenPasswort"] == "") {
 			$neuesPasswort = $_POST ["accountBearbeitenPasswort"];
+		} else {
+			$neuesPasswort = $_SESSION ["passwort"];
 		}
 		
-		if (isset ( $_POST ["accountBearbeitenPasswortWiederholen"] )) {
+		if (isset ( $_POST ["accountBearbeitenPasswortWiederholen"] )  && !$_POST["accountBearbeitenPasswort"] == "") {
 			$neuesPasswortWiederholen = $_POST ["accountBearbeitenPasswortWiederholen"];
+		} else {
+			$neuesPasswortWiederholen = $_SESSION ["passwort"];
 		}
 		
 		if (filter_var ( $neueEmail, FILTER_VALIDATE_EMAIL )) {
-			if (isset ( $neuesPasswort )) {
+			if (isset ( $neuesPasswort ) && strlen($neuesPasswort) > 3 && strlen($neuerBenutzername >= 3)) {
 				if ($neuesPasswort === $neuesPasswortWiederholen) {
 					$neuesPasswort = sha1 ( $neuesPasswort );
 					$_SESSION ["passwort"] = $neuesPasswort;

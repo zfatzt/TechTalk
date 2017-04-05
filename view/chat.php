@@ -23,7 +23,7 @@ document.getElementById('login').click();</script>";
 	<div class="links col">
 		<div class="chatBoxKlein">
 			<h2><?= $alleUser ?></h2>
-		</div>
+		</div> 
 		<div class="chatBoxKlein">
 			<h3>
 				<a href="/chat/chatErstellen?name=bitcoin&chat_id=1">Bitcoin</a>

@@ -8,13 +8,14 @@ class UeberpruefungController {
 			$email = htmlspecialchars ( $_POST ["anmeldeEmail"] );
 			$passwort = htmlspecialchars ( $_POST ['anmeldePasswort'] );
 			
+			$_SESSION ['passwort'] = $passwort;
+			
 			$userRepository = new UserRepository ();
 			$loginResult = $userRepository->existiertNutzer ( $email, $passwort );
 			if ($loginResult->getBuntzerExistiert () != null && $loginResult->getBenutzername () != null) {
 				
 				$_SESSION ['benutzername'] = $loginResult->getBenutzername ();
 				$_SESSION ['id'] = $loginResult->getId ();
-				$_SESSION ['passwort'] = $loginResult->getPasswort ();
 				$_SESSION ['email'] = $loginResult->getEmail ();
 				$_SESSION ['eingabe'] = "";
 				header ( "Location: /" );
@@ -42,7 +43,7 @@ class UeberpruefungController {
 			$passwortWiederholen = htmlspecialchars ( $_POST ['reenterpassword'] );
 			$computercheck = $_POST ['humancheck'];
 			
-			if ($passwort === $passwortWiederholen && $computercheck == "human") {
+			if ($passwort === $passwortWiederholen && $computercheck == "human" && strlen($benutzername) >= 3 && strlen($passwort) > 5){
 				$userRepository = new UserRepository ();
 				$userRepository->benutzerErstellen ( $benutzername, $email, $passwort );
 				header ( "Location: /" );

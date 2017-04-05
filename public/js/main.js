@@ -32,11 +32,11 @@ function ueberpruefung() {
 	if (password1 != password2 && password1 != false) {
 		document.getElementById("warnung").innerHTML = document
 				.getElementById("warnung").innerHTML
-				+ "Passw&ouml;rter stimmen nicht überein!<br/>";
+				+ "Passwörter stimmen nicht überein!<br/>";
 	}
-	if (password1.length < 8) {
+	if (password1.length < 5) {
 		document.getElementById("warnung").innerHTML = document
 				.getElementById("warnung").innerHTML
-				+ "Passwort muss mindestens 8 Zeichen lang sein!<br/>";
+				+ "Passwort muss mindestens 5 Zeichen lang sein!<br/>";
 	}
 }
