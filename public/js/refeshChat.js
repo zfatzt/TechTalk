@@ -2,6 +2,6 @@
 	
 	setInterval(function(){
 	      $('#chatBox').load('/chat/chatAktuallisieren');
-	 },5000);
+	 },1000);
 	
 //});
