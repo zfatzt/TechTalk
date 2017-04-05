@@ -1,6 +1,14 @@
 <?php
 require_once '../lib/Repository.php';
 class ChatRepository extends Repository {
+	public function objectToArray($object) {
+		if (! is_object ( $object ) && ! is_array ( $object ))
+			return $object;
+		return array_map ( array (
+				"HelperFunctions",
+				"objectToArray" 
+		), ( array ) $object );
+	}
 	public function textAuslesen($id) {
 		$userRepo = new UserRepository ();
 		$userRepo->nutzerAuslesen ();

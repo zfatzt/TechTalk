@@ -1,5 +1,3 @@
-/* Ajax funktion um den logout button zu drücken*/
-
 function logout() {
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open('GET', '/logout/', true);
@@ -13,9 +11,7 @@ function logout() {
 	xmlhttp.send(null);
 }
 
-
-/*clientseitige überprüfung von eingaben & Validierungen*/
-
+/* clientseitige überprüfung von eingaben & Validierungen */
 function ueberpruefung() {
 	document.getElementById("warnung").innerHTML = "";
 	var name = document.getElementById("benutzername").value;
@@ -44,17 +40,10 @@ function ueberpruefung() {
 	}
 }
 
-/* noch unklar ob gebraucht :D
-function refresh(){
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open('GET','/chat/chatSenden', true);
-    xmlhttp.onreadystatechange=function(){
-       if (xmlhttp.readyState == 4){
-          if(xmlhttp.status == 200){
-             alert(xmlhttp.responseText);
-         }
-       }
-    };
-    xmlhttp.send(null);
-}
-*/
+/*
+ * noch unklar ob gebraucht :D function refresh(){ var xmlhttp = new
+ * XMLHttpRequest(); xmlhttp.open('GET','/chat/chatSenden', true);
+ * xmlhttp.onreadystatechange=function(){ if (xmlhttp.readyState == 4){
+ * if(xmlhttp.status == 200){ alert(xmlhttp.responseText); } } };
+ * xmlhttp.send(null); }
+ */

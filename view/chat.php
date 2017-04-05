@@ -1,20 +1,20 @@
-<?php if(!isset($_SESSION["id"])){ 
+<?php
+if (! isset ( $_SESSION ["id"] )) {
 	$view = new View ( 'default_index' );
 	$view->title = 'Bitte Anmelden';
 	$view->heading = '';
 	$view->tablogin = false;
 	$view->display ();
 	
-	
 	echo "<script>document.getElementById('loginFehler').innerHTML = 'Bitte Einloggen oder Registrieren'
 			document.getElementById('serverWarnung').innerHTML = 'Bitte Einloggen oder Registrieren';
 						document.getElementById('login').click();
 						</script>";
 	
-	$_SESSION["id"] = null;
-	
-	}else {?> 
-	
+	$_SESSION ["id"] = null;
+} else {
+	?>
+
 <div id="chat" class="row">
 	<h3><?=$title ?></h3>
 	<div class="links col">
@@ -29,15 +29,17 @@
 	</div>
 	<div id="rechts" class="col">
 		<div class="chatBoxGross">
-		<?= $alleNachrichten ?>
+		<?php require 'chatBox.php'; ?>
 		</div>
 		<div id="nachricht">
-			<form action="/chat/chatSenden?name=<?=$name ?>&chat_id=<?=$chat_id?>"
+			<form
+				action="/chat/chatSenden?name=<?=$name ?>&chat_id=<?=$chat_id?>"
 				method="post">
 				<div class="input-group">
 					<input type="text" class="form-control"
 						placeholder="Nachricht eingeben..." id="nachrichtText"
-						name="nachrichtText" <?php if (isset($eingabe)) { ?>  echo "value='$eingabe'" <?php } ?>   > <span class="input-group-btn">
+						name="nachrichtText" <?php if (isset($eingabe)) { ?>
+						echo "value='$eingabe' " <?php } ?>> <span class="input-group-btn">
 						<button id="absendenButton" class="btn btn-success" type="submit">
 							<span class="glyphicon glyphicon-send" onclick="refresh()"></span>
 						</button>
@@ -47,5 +49,9 @@
 		</div>
 	</div>
 </div>
-		
- <?php }?>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+	crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/refeshChat.js"></script>
+<?php }?>
