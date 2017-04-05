@@ -4,6 +4,7 @@ if (! isset ( $_SESSION ["id"] )) {
 	$view->title = 'Bitte Anmelden';
 	$view->heading = '';
 	$view->tablogin = false;
+	$view->active = 'chat';
 	$view->display ();
 	
 	echo "<script>document.getElementById('loginFehler').innerHTML = 'Bitte Einloggen oder Registrieren'

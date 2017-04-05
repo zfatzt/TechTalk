@@ -64,6 +64,7 @@ class ChatController {
 					$kunde_id = intval ( $kunde_id );
 					$text_id = $chatRepo->textSpeichern ( $nachricht );
 					$text_id = intval ( $text_id );
+					$view->active = 'chat';
 					$view->chat = $chatRepo->textZuordnen ( $text_id, $chat_id, $kunde_id );
 					$name = $_GET ["name"];
 				}
