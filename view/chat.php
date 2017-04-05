@@ -9,10 +9,12 @@ if (! isset ( $_SESSION ["id"] )) {
 	
 	echo "<script>document.getElementById('loginFehler').innerHTML = 'Bitte Einloggen oder Registrieren'
 			document.getElementById('serverWarnung').innerHTML = 'Bitte Einloggen oder Registrieren';
-						document.getElementById('login').click();
-						</script>";
+document.getElementById('login').click();</script>";
 	
 	$_SESSION ["id"] = null;
+	?>
+
+<?php
 } else {
 	?>
 

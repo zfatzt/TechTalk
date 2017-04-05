@@ -37,14 +37,14 @@
 						if (strcmp ( 'home', $active ) == 0) {
 							echo 'class=active';
 						}
-						?>><a href="/">Home</a></li>
+						?>><a  id="home" href="/">Home</a></li>
 					<li>
 					<?php
 					if (isset ( $username )) {
 						echo '<a href="/" onclick="logout()" ><p>Logout</p></a>';
 					} else {
 						echo '<a href="#signup" id="login" data-toggle="modal"+
-						data-target=".bs-modal-sm"><p>Login</p></a>';
+						data-target=".bs-modal-sm">Login</a>';
 					}
 					?>
 					</li>
