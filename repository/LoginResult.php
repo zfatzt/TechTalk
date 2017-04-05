@@ -6,7 +6,6 @@ class LoginResult {
 	private $email;
 	private $passwort;
 	private $id;
-
 	public function setBenutzername($benutzername) {
 		$this->benutzername = $benutzername;
 	}

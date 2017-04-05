@@ -13,7 +13,7 @@ class UserRepository extends Repository {
 		$statement->bind_param ( 'sss', $benutzername, $email, $passwort );
 		
 		if (! $statement->execute ()) {
-			header("Location: /error");
+			header ( "Location: /error" );
 		}
 		
 		return $statement->insert_id;
@@ -26,7 +26,7 @@ class UserRepository extends Repository {
 		$statement->bind_param ( 'sssi', $benutzername, $email, $passwort, $id );
 		
 		if (! $statement->execute ()) {
-			header("Location: /error");
+			header ( "Location: /error" );
 		}
 	}
 	public function existiertNutzer($email, $passwort) {
@@ -43,7 +43,7 @@ class UserRepository extends Repository {
 		$result = $statement->get_result ();
 		
 		if (! $statement->execute ()) {
-			header("Location: /error");
+			header ( "Location: /error" );
 		}
 		
 		$row = $result->fetch_assoc ();
@@ -69,7 +69,7 @@ class UserRepository extends Repository {
 		$result = $statement->get_result ();
 		
 		if (! $statement->execute ()) {
-			header("Location: /error");
+			header ( "Location: /error" );
 		}
 		$userString = "";
 		if ($result->num_rows > 0) {
@@ -94,7 +94,7 @@ class UserRepository extends Repository {
 		$result = $statement->get_result ();
 		
 		if (! $statement->execute ()) {
-			header("Location: /error");
+			header ( "Location: /error" );
 		}
 		$row = $result->fetch_assoc ();
 		$benutzername = $row ["benutzername"];

@@ -1,9 +1,8 @@
 <?php
-class woerterConfig{
-
-	//Scrollen Sie bis zum nächsten kommentar
-
-	public function fluchwortArray(){
+class woerterConfig {
+	
+	// Scrollen Sie bis zum nächsten kommentar
+	public function fluchwortArray() {
 		$array = array (
 				"4r5e",
 				"5h1t",
@@ -459,10 +458,11 @@ class woerterConfig{
 				"(|)",
 				"schwanz",
 				"fotze",
-				"hure",
-				//weitere Wöerter hier einfügen mit gleichem Format wie oben.
+				"hure" 
+			// weitere Wöerter hier einfügen mit gleichem Format wie oben.
 		);
-
+		
 		return $array;
 	}
-}			?>
+}
+?>
