@@ -315,6 +315,7 @@ class woerterConfig{
 				"niggaz",
 				"nigger",
 				"niggers",
+				"nudes",
 				"nob",
 				"nob jokey",
 				"nobhead",
@@ -454,7 +455,11 @@ class woerterConfig{
 				"willies",
 				"willy",
 				"xrated",
-				"xxx"
+				"xxx",
+				"(|)",
+				"schwanz",
+				"fotze",
+				"hure",
 				//weitere Wöerter hier einfügen mit gleichem Format wie oben.
 		);
 
