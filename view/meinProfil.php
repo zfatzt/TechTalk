@@ -47,16 +47,13 @@
 					class="btn btn-info"
 					style="background-color: white; color: black; border-color: black;">Abbrechen</a>
 			</div>
-		
+		</div>
 	</form>
 	<form class="form-horizontal form-group" method="post"
 		action="/user/profilLoeschen">
 		<button type="submit" class="btn btn-default"
 			style="color: white; float: right; background-color: red">Profil
 			Löschen</button>
-
 	</form>
 </div>
-</div>
-
 <hr>

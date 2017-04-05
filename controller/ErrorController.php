@@ -7,10 +7,5 @@ class ErrorController {
 		$view->heading = 'Error';
 		$view->display ();
 	}
-	public function connection() {
-		$view = new ErrorView ( 'ConnectionError' );
-		$view->title = 'Error';
-		$view->heading = 'Error';
-		$view->display ();
-	}
 }
+?>
