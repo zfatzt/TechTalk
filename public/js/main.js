@@ -4,7 +4,7 @@ function logout() {
 	xmlhttp.onreadystatechange = function() {
 		if (xmlhttp.readyState == 4) {
 			if (xmlhttp.status == 200) {
-				
+
 			}
 		}
 	};
@@ -22,6 +22,7 @@ function ueberpruefung() {
 	if (name.length < 2) {
 		document.getElementById("warnung").innerHTML = "Der Benutzername ist zu kurz <br/>";
 	}
+
 	if (/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 			.test(email) == false) {
 		document.getElementById("warnung").innerHTML = document
@@ -39,11 +40,3 @@ function ueberpruefung() {
 				+ "Passwort muss mindestens 8 Zeichen lang sein!<br/>";
 	}
 }
-
-/*
- * noch unklar ob gebraucht :D function refresh(){ var xmlhttp = new
- * XMLHttpRequest(); xmlhttp.open('GET','/chat/chatSenden', true);
- * xmlhttp.onreadystatechange=function(){ if (xmlhttp.readyState == 4){
- * if(xmlhttp.status == 200){ alert(xmlhttp.responseText); } } };
- * xmlhttp.send(null); }
- */

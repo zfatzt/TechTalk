@@ -26,9 +26,9 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<h2>
-					<a class="navbar-brand" href="/">Tech Talk</a>
-				</h2>
+
+				<a class="navbar-brand" href="/"><h2>Tech Talk</h2></a>
+
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
@@ -78,6 +78,8 @@
 									P10</a></li>
 						</ul>
 					<?php if (isset ( $username )) { ?>
+					
+					
 					<li
 						<?php
 						
