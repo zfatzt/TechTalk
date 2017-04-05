@@ -5,6 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+body{
+  background-color: #9acbc4;
+  text-align:center;
+}
+
 h3 {
 	letter-spacing: 5px;
 	text-transform: uppercase;
@@ -12,20 +17,29 @@ h3 {
 	text-align: center;
 	margin: 5px;
 }
+
+a {
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	font: 10px "Lato", sans-serif;
+	margin: 5px;
+	text-decoration: none;
+	color: black;
+
 }
 </style>
 </head>
 <style>
 </style>
 
-<body style="background-color: #9acbc4; font-family: sans-serif;">
-	<h3 style="text-align: center; margin-top: 5%;">Sorry, we ran into a
+<body>
+	<h3 style="margin-top: 5%;">Sorry, we ran into a
 		Problem</h3>
-	</h1>
 	<div
 		style="margin: auto 0; text-align: center; margin-top: 10%; padding: auto 0;">
 		<img src="../images/avocado.gif" alt="Avocado Gif">
 
 	</div>
+	<a href="/">zur Website</a>
 </body>
 </html>

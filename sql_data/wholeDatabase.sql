@@ -9,7 +9,9 @@ email varchar(45) not null,
 passwort varchar(45) not null);
 
 #Standart Passwort für admin ist Welcome$16
-insert into kunde(benutzername, email, passwort) values ('admin', 'admin@admin.ch', '4da7dc70df7bff1525a251f3b3bee056bd905f69'); 
+insert into kunde(benutzername, email, passwort) values ('admin', 'admin@admin.ch', '4da7dc70df7bff1525a251f3b3bee056bd905f69');
+#PW Laurent
+insert into kunde(benutzername, email, passwort) values ('Laurent', 'laurent.mouchart@gmx.ch', '8024771b897effa12b29af821b766cc79d851889');
 
 
 

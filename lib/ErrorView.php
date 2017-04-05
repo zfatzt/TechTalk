@@ -7,7 +7,7 @@ class ErrorView
 
 	public function __construct($viewfile)
 	{
-		$this->viewfile = "./../ErrorViews/$viewfile.php";
+		$this->viewfile = "../ErrorViews/$viewfile.php";
 	}
 
 	public function __set($key, $value)

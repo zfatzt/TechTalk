@@ -2,9 +2,15 @@
 require_once '../lib/ErrorView.php';
 class ErrorController {
 	public function index() {
-		$view = new ErrorView( 'MainError' );
-		$view->title = 'Error 404';
-		$view->heading = 'Error 404';
+		$view = new ErrorView ( 'MainError' );
+		$view->title = 'Error';
+		$view->heading = 'Error';
+		$view->display ();
+	}
+	public function connection() {
+		$view = new ErrorView ( 'ConnectionError' );
+		$view->title = 'Error';
+		$view->heading = 'Error';
 		$view->display ();
 	}
 }
