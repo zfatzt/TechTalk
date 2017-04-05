@@ -22,9 +22,15 @@ if (! isset ( $_SESSION ["id"] )) {
 			<h2><?= $alleUser ?></h2>
 		</div>
 		<div class="chatBoxKlein">
-			<a href="/chat/chatErstellen?name=bitcoin&chat_id=1"><h3>Bitcoin</h3></a>
-			<a href="/chat/chatErstellen?name=dronen&chat_id=2"><h3>Dronen</h3></a>
-			<a href="/chat/chatErstellen?name=HuaweiP10&chat_id=3"><h3>Huawei P10</h3></a>
+			<h3>
+				<a href="/chat/chatErstellen?name=bitcoin&chat_id=1">Bitcoin</a>
+			</h3>
+			<h3>
+				<a href="/chat/chatErstellen?name=dronen&chat_id=2">Dronen</a>
+			</h3>
+			<h3>
+				<a href="/chat/chatErstellen?name=HuaweiP10&chat_id=3">Huawei P10</a>
+			</h3>
 		</div>
 	</div>
 	<div id="rechts" class="col">
@@ -39,7 +45,7 @@ if (! isset ( $_SESSION ["id"] )) {
 					<input type="text" class="form-control"
 						placeholder="Nachricht eingeben..." id="nachrichtText"
 						name="nachrichtText" <?php if (isset($eingabe)) { ?>
-						echo "value='$eingabe' " <?php } ?>> <span class="input-group-btn">
+						value='$eingabe' <?php } ?>> <span class="input-group-btn">
 						<button id="absendenButton" class="btn btn-success" type="submit">
 							<span class="glyphicon glyphicon-send" onclick="refresh()"></span>
 						</button>

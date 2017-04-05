@@ -1,7 +1,7 @@
 </main>
 <footer>
 	<div style="text-align: center;">
-		<p >&copy; Laurent Mouchart & Tobias Fatzer 2017</p>
+		<p>&copy; Laurent Mouchart & Tobias Fatzer 2017</p>
 	</div>
 </footer>
 <script
@@ -12,6 +12,6 @@
 	crossorigin="anonymous"></script>
 <script src="/js/main.js">
 </script>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB54mw2M-8uZMC3_OGvIHA_eb7uqCrN2lo&callback=myMap"></script>
+<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB54mw2M-8uZMC3_OGvIHA_eb7uqCrN2lo&callback=myMap"></script>
 </html>

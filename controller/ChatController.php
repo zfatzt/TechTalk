@@ -31,16 +31,15 @@ class ChatController {
 		$view->display ();
 	}
 	public function chatAktuallisieren() {
-			
-		if (!isset($_SESSION["currentChatId"]))
-		{
-			$_SESSION["currentChatId"] = 1;
+		if (! isset ( $_SESSION ["currentChatId"] )) {
+			$_SESSION ["currentChatId"] = 1;
 		}
 		
 		$view = new View ( 'chatBox' );
 		$chatRepo = new ChatRepository ();
-		$view->alleNachrichten = $chatRepo->textAuslesen ( intval ($_SESSION ["currentChatId"]));;
-		$view->showOnlyFile();
+		$view->alleNachrichten = $chatRepo->textAuslesen ( intval ( $_SESSION ["currentChatId"] ) );
+		;
+		$view->showOnlyFile ();
 	}
 	public function chatSenden() {
 		$chatRepo = new ChatRepository ();
@@ -68,13 +67,13 @@ class ChatController {
 					$view->chat = $chatRepo->textZuordnen ( $text_id, $chat_id, $kunde_id );
 					$name = $_GET ["name"];
 				}
-				$this->chatErstellen();
+				$this->chatErstellen ();
 			} else {
-				$this->chatErstellen();
+				$this->chatErstellen ();
 			}
 		} else {
 			echo '<script>alert("Bitte diese Seite nicht spamen!")</script>';
-			$this->chatErstellen();
+			$this->chatErstellen ();
 		}
 	}
 }

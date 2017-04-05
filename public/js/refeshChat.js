@@ -1,7 +1,3 @@
-//$( document ).ready(function() {
-	
-	setInterval(function(){
-	      $('#chatBox').load('/chat/chatAktuallisieren');
-	 },1000);
-	
-//});
+setInterval(function() {
+	$('#chatBox').load('/chat/chatAktuallisieren');
+}, 1000);

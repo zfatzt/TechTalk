@@ -19,37 +19,24 @@
 						<form class="form-horizontal" method="post"
 							action="/ueberpruefung/anmelden">
 							<fieldset>
-								<!-- Sign In Form -->
-								<!-- Text input-->
+								<!-- anmelden -->
 								<div class="control-group">
 									<label class="control-label" for="anmeldeEmail">Email:</label>
 									<div class="controls">
-										<input required="" id="anmeldeEmail" name="anmeldeEmail"
-											type="email" placeholder="max@mustermann.ch"
+										<input id="anmeldeEmail" name="anmeldeEmail" type="email"
+											placeholder="max@mustermann.ch"
 											class="input-medium form-control">
 									</div>
 								</div>
-								<!-- Password input-->
+
 								<div class="control-group">
 									<label class="control-label" for="anmeldePasswort">Passwort:</label>
 									<div class="controls">
-										<input required="" id="anmeldePasswort" name="anmeldePasswort"
+										<input id="anmeldePasswort" name="anmeldePasswort"
 											class="form-control input-medium" type="password"
 											placeholder="********">
 									</div>
 								</div>
-
-								<!-- Multiple Checkboxes (inline) -->
-								<div class="control-group">
-									<label class="checkbox" for="rememberme"></label>
-									<div class="controls">
-										<label class="checkbox" for="rememberme"> <input
-											type="checkbox" name="rememberme" id="rememberme"
-											value="Remember me"> Angemeldet bleiben
-										</label>
-									</div>
-								</div>
-
 								<!-- Button -->
 								<div class="control-group">
 									<label class="control-label" for="signinButton"></label>
@@ -62,9 +49,6 @@
 							</fieldset>
 						</form>
 					</div>
-
-
-
 					<div
 						class="tab-pane fade <?php if (!$tablogin) echo 'active in' ?>"
 						id="signup">
@@ -77,9 +61,9 @@
 								<div class="control-group">
 									<label class="control-label" for="email">Email:</label>
 									<div class="controls">
-										<input id="email" name="email"
-											type="email" placeholder="max@mustermann.ch"
-											class="input-large form-control" required="" onkeyup="ueberpruefung()">
+										<input id="email" name="email" type="email"
+											placeholder="max@mustermann.ch"
+											class="input-large form-control" onkeyup="ueberpruefung()">
 									</div>
 								</div>
 
@@ -88,20 +72,20 @@
 									<div class="control-group">
 										<label class="control-label" for="benutzername">Benutzername:</label>
 										<div class="controls">
-											<input id="benutzername" name="benutzername"
-												 type="text" placeholder="Max457"
-												class="input-large form-control" required="" onkeyup="ueberpruefung()">
+											<input id="benutzername" name="benutzername" type="text"
+												placeholder="Max457" class="input-large form-control"
+												onkeyup="ueberpruefung()">
 										</div>
 									</div>
 
 
 
-									<!-- Password input-->
+
 									<div class="control-group">
 										<label class="control-label" for="password">Passwort:</label>
 										<div class="controls">
-											<input id="password" name="password"
-												type="password" placeholder="********" class="input-large form-control"
+											<input id="password" name="password" type="password"
+												placeholder="********" class="input-large form-control"
 												onkeyup="ueberpruefung()"> <em>1-8 Characters</em>
 										</div>
 									</div>
@@ -111,14 +95,12 @@
 										<label class="control-label" for="reenterpassword"
 											onkeyup="ueberpruefung()"> Passwort wiederholen:</label>
 										<div class="controls">
-											<input id="reenterpassword"
-												name="reenterpassword" type="password"
-												placeholder="********" class="input-large form-control" required=""
-												onkeyup="ueberpruefung()">
+											<input id="reenterpassword" name="reenterpassword"
+												type="password" placeholder="********"
+												class="input-large form-control" onkeyup="ueberpruefung()">
 										</div>
 									</div>
 								</div>
-								<!-- Multiple Radios (inline) -->
 								<br>
 								<div class="control-group">
 									<div class="controls">
@@ -131,8 +113,6 @@
 										</label>
 									</div>
 								</div>
-
-								<!-- Button -->
 								<div class="control-group">
 									<label class="control-label" for="confirmsignup"></label>
 									<div class="controls">
@@ -150,7 +130,7 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<div style="text-allign:center;">
+				<div style="text-allign: center;">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Abbrechen</button>
 				</div>
 			</div>

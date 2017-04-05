@@ -26,7 +26,9 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="/"><h2>Tech Talk</h2></a>
+				<h2>
+					<a class="navbar-brand" href="/">Tech Talk</a>
+				</h2>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
@@ -35,7 +37,7 @@
 						if (strcmp ( 'home', $active ) == 0) {
 							echo 'class=active';
 						}
-						?>><a href="/"><p>Home</p></a></li>
+						?>><a href="/">Home</a></li>
 					<li>
 					<?php
 					if (isset ( $username )) {
@@ -52,14 +54,14 @@
 						if (strcmp ( 'ueberuns', $active ) == 0) {
 							echo 'class=active';
 						}
-						?>><a href="/ueberuns/ueberuns"><p>Über uns</p></a></li>
+						?>><a href="/ueberuns/ueberuns">Über uns</a></li>
 					<li
 						<?php
 						
 						if (strcmp ( 'kontakt', $active ) == 0) {
 							echo 'class=active';
 						}
-						?>><a href="/kontakt/kontakt"><p>Kontakt</p></a></li>
+						?>><a href="/kontakt/kontakt">Kontakt</a></li>
 					<li class="dropdown"
 						<?php
 						
@@ -75,21 +77,14 @@
 							<li><a href="/chat/chatErstellen?name=Huawei P10&chat_id=3">Huawei
 									P10</a></li>
 						</ul>
-					<?php
-					
-					if (isset ( $username )) {
-						?>
-					
-					
-					
-					
+					<?php if (isset ( $username )) { ?>
 					<li
 						<?php
 						
 						if (strcmp ( 'meinProfil', $active ) == 0) {
 							echo 'class=active';
 						}
-						?>><a href="/user/meinProfil"><p>Mein Profil</p></a></li>'<?php
+						?>><a href="/user/meinProfil">Mein Profil</a></li><?php
 					} else {
 						echo "";
 					}
