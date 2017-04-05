@@ -18,14 +18,15 @@ h3 {
 <style>
 </style>
 
-<body style="background-color: #9acbc4; font-family: sans-serif;">
-	<h3 style="text-align: center; margin-top: 5%;">Sorry, we ran into a
+<body style="background-color: #9acbc4">
+	<h3 style="margin-top: 5%;">Sorry, we ran into a
 		Problem</h3>
-	</h1>
+			<h3 style="font-size: 10px;">(No Database Conncetion)</h3>
 	<div
 		style="margin: auto 0; text-align: center; margin-top: 10%; padding: auto 0;">
 		<img src="../images/avocado.gif" alt="Avocado Gif">
 
 	</div>
+
 </body>
 </html>
