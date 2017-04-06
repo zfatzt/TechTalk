@@ -63,7 +63,7 @@
 									<div class="controls">
 										<input id="email" name="email" type="email"
 											placeholder="max@mustermann.ch"
-											class="input-large form-control" onkeyup="ueberpruefung()">
+											class="input-large form-control" onchange="ueberpruefung()">
 									</div>
 								</div>
 
@@ -74,7 +74,7 @@
 										<div class="controls">
 											<input id="benutzername" name="benutzername" type="text"
 												placeholder="Max457" class="input-large form-control"
-												onkeyup="ueberpruefung()">
+												onchange="ueberpruefung()">
 										</div>
 									</div>
 
@@ -86,7 +86,7 @@
 										<div class="controls">
 											<input id="password" name="password" type="password"
 												placeholder="********" class="input-large form-control"
-												onkeyup="ueberpruefung()"> <em>1-8 Characters</em>
+												onchange="ueberpruefung()"> <em>5 und mehr Zeichen</em>
 										</div>
 									</div>
 
@@ -97,7 +97,7 @@
 										<div class="controls">
 											<input id="reenterpassword" name="reenterpassword"
 												type="password" placeholder="********"
-												class="input-large form-control" onkeyup="ueberpruefung()">
+												class="input-large form-control" onchange="ueberpruefung()">
 										</div>
 									</div>
 								</div>

@@ -59,6 +59,10 @@ class UserRepository extends Repository {
 		$loginResult->setEmail ( $email );
 		return $loginResult;
 	}
+	
+	
+	
+	
 	public function nutzerAuslesen() {
 		$sql = "SELECT techtalk.kunde.benutzername FROM techtalk.kunde";
 		
