@@ -45,6 +45,7 @@ class UeberpruefungController {
 			
 			$laengePasswort = strlen ( $passwort );
 			$laengeBenutzernameme = strlen ( $benutzername );
+		
 			
 			if ($passwort === $passwortWiederholen && $computercheck == "human" && $laengeBenutzernameme >= 3 && $laengePasswort > 5) {
 				$userRepository = new UserRepository ();

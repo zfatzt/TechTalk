@@ -1,6 +1,6 @@
 function logout() {
 	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.open('GET', '/logout/logout', true);
+	xmlhttp.open('GET', '/logout/', true);
 	xmlhttp.onreadystatechange = function() {
 		if (xmlhttp.readyState == 4) {
 			if (xmlhttp.status == 200) {
