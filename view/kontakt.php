@@ -2,7 +2,7 @@
 <div class="textfield">
 	<h3>Kontakt</h3>
 	<div style="text-align: center;">
-		<p>Wie bereits gesagt arbeiten wir im ICT-Berufsibldungscenter in
+		<p>Wie bereits gesagt, arbeiten wir im ICT-Berufsibldungscenter in
 			Altstetten.</p>
 		<p>Telefon: 044 448 44 53</p>
 		<p>
