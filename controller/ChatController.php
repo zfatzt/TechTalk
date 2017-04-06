@@ -56,7 +56,7 @@ class ChatController {
 					echo '<script>alert("Bitte keine Schimpfwörter!")</script>';
 				} else {
 					$view = new View ( 'chat' );
-					$nachricht = $_POST ["nachrichtText"];
+					$nachricht = htmlspecialchars($_POST ["nachrichtText"]);
 					$chatRepo = new ChatRepository ();
 					$chat_id = $_GET ["chat_id"];
 					$chat_id = intval ( $chat_id );
