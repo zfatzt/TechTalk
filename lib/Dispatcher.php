@@ -4,7 +4,10 @@ class Dispatcher {
 		try {
 			if (! isset ( $_SESSION )) {
 				session_start ();
+				$_SESSION ["id"] = null;
 			}
+
+			
 			
 			$uri = $_SERVER ['REQUEST_URI'];
 			$uri = strtok ( $uri, '?' ); // Erstes ? und alles danach abschneiden
