@@ -41,3 +41,38 @@ function ueberpruefung() {
 	}
 }
 
+
+
+	function accountBearbeitenUeberpruefung() {
+		document.getElementById("accountWarnung").innerHTML = "";
+		var name = document.getElementById("accountBearbeitenBenutzername").value;
+		var email = document.getElementById("accountBearbeitenEmail").value;
+		var password1 = document.getElementById("accountBearbeitenPasswort").value;
+		var password2 = document.getElementById("accountBearbeitenNeuesPasswortWiederholen").value;
+
+		if (name.length < 2) {
+			document.getElementById("accountWarnung").innerHTML = "Der Benutzername ist zu kurz <br/>";
+		}
+
+		if (/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+				.test(email) == false) {
+			document.getElementById("accountWarnung").innerHTML = document
+					.getElementById("accountWarnung").innerHTML
+					+ "E-Mail Adresse ist ungültig!<br/>";
+		}
+		if (password1 != password2 && password1 != false) {
+			document.getElementById("accountWarnung").innerHTML = document
+					.getElementById("accountWarnung").innerHTML
+					+ "Passwörter stimmen nicht überein!<br/>";
+		}
+		if (password1.length < 5) {
+			document.getElementById("accountWarnung").innerHTML = document
+					.getElementById("accountWarnung").innerHTML
+					+ "Passwort muss mindestens 5 Zeichen lang sein!<br/>";
+		}
+
+
+
+
+}
+

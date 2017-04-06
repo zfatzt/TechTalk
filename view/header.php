@@ -2,9 +2,11 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="I like trains">
+
+<title><?= $title ?> | Tech Talk</title>
+
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
@@ -37,7 +39,7 @@
 						if (strcmp ( 'home', $active ) == 0) {
 							echo 'class=active';
 						}
-						?>><a  id="home" href="/">Home</a></li>
+						?>><a id="home" href="/">Home</a></li>
 					<li>
 					<?php
 					if (isset ( $username )) {
@@ -62,15 +64,15 @@
 							echo 'class=active';
 						}
 						?>><a href="/kontakt/kontakt">Kontakt</a></li>
-					<li class="dropdown"
-						<?php
+					<li class="dropdown"><a href="#"
+						class=" <?php
 						
 						if (strcmp ( 'chat', $active ) == 0) {
-							echo 'class=active';
+							echo 'active';
 						}
-						?>><a href="#" class="dropdown-toggle" data-toggle="dropdown"
-						role="button" aria-haspopup="true" aria-expanded="false">Chats<span
-							class="caret"></span></a>
+						?>dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false">Chats<span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="/chat/chatErstellen?name=bitcoin&chat_id=1">Bitcoin</a></li>
 							<li><a href="/chat/chatErstellen?name=dronen&chat_id=2">Dronen</a></li>
@@ -78,6 +80,8 @@
 									P10</a></li>
 						</ul>
 					<?php if (isset ( $username )) { ?>
+					
+					
 					
 					
 					<li

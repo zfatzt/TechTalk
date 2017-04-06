@@ -6,8 +6,9 @@
 		<div class="form-group">
 			<label class="col-lg-3 control-label">Email:</label>
 			<div class="col-lg-8">
-				<input class="form-control" id="email"
-					name="accountBearbeitenEmail" type="text" onkeyup="ueberpruefung()"
+				<input class="form-control" id="accountBearbeitenEmail"
+					name="accountBearbeitenEmail" type="text"
+					onkeyup="accountBearbeitenUeberpruefung()"
 					value="<?php echo $_SESSION['email'];?>">
 			</div>
 		</div>
@@ -15,8 +16,9 @@
 			<label class="col-md-3 control-label">Benutzername:</label>
 			<div class="col-md-8">
 				<input class="form-control" type="text"
-					id="benutzername"
-					name="accountBearbeitenBenutzername" onkeyup="ueberpruefung()"
+					id="accountBearbeitenBenutzername"
+					name="accountBearbeitenBenutzername"
+					onkeyup="accountBearbeitenUeberpruefung()"
 					value="<?php echo $_SESSION['benutzername'];?>">
 			</div>
 		</div>
@@ -24,22 +26,23 @@
 			<label class="col-md-3 control-label">neues Password:</label>
 			<div class="col-md-8">
 				<input class="form-control" name="accountBearbeitenPasswort"
-					value=<?php $_SESSION['passwort']?>
-					id="password" onkeyup="ueberpruefung()"
-					type="password">
+					value="<?php echo $_SESSION['passwort'];?>" type="password"
+					id="accountBearbeitenPasswort"
+					onkeyup="accountBearbeitenUeberpruefung()">
 			</div>
 		</div>
 		<div class="form-group">
 			<label class="col-md-3 control-label">neues Passwort Wiederholen:</label>
 			<div class="col-md-8">
 				<input class="form-control"
-					id="reenterpassword" type="password"
-					onkeyup="ueberpruefung()"
+					id="accountBearbeitenNeuesPasswortWiederholen" type="password"
+					onkeyup="accountBearbeitenUeberpruefung()"
 					name="accountBearbeitenPasswortWiederholen">
 			</div>
 		</div>
 		<div id="bearbeiteWarnung"></div>
-		<div div class="alert alert-warning" role="alert" style="text-align: center" id="warnung"></div>
+		<div class="alert alert-warning" role="alert"
+			style="text-align: center" id="accountWarnung"></div>
 		<div class="form-group">
 			<label class="col-md-3 control-label"></label>
 			<div class="col-md-8">
