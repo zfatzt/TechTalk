@@ -40,3 +40,4 @@ function ueberpruefung() {
 				+ "Passwort muss mindestens 5 Zeichen lang sein!<br/>";
 	}
 }
+

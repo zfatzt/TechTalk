@@ -17,7 +17,7 @@ class UserController {
 		if (isset ( $_POST ["accountBearbeitenEmail"] )) {
 			$neueEmail = $_POST ["accountBearbeitenEmail"];
 		} else {
-			$neueEmail = $_SESSION["email"];
+			$neueEmail = $_SESSION ["email"];
 		}
 		
 		if (isset ( $_POST ["accountBearbeitenBenutzername"] )) {
@@ -26,20 +26,22 @@ class UserController {
 			$neuerBenutzername = $_SESSION ["benutzername"];
 		}
 		
-		if (isset ( $_POST ["accountBearbeitenPasswort"] ) && !$_POST["accountBearbeitenPasswort"] == "") {
+		if (isset ( $_POST ["accountBearbeitenPasswort"] ) && ! $_POST ["accountBearbeitenPasswort"] == "") {
 			$neuesPasswort = $_POST ["accountBearbeitenPasswort"];
 		} else {
 			$neuesPasswort = $_SESSION ["passwort"];
 		}
 		
-		if (isset ( $_POST ["accountBearbeitenPasswortWiederholen"] )  && !$_POST["accountBearbeitenPasswort"] == "") {
+		if (isset ( $_POST ["accountBearbeitenPasswortWiederholen"] ) && ! $_POST ["accountBearbeitenPasswort"] == "") {
 			$neuesPasswortWiederholen = $_POST ["accountBearbeitenPasswortWiederholen"];
 		} else {
 			$neuesPasswortWiederholen = $_SESSION ["passwort"];
 		}
+		$laengePasswort = strlen ( $neuesPasswort );
+		$laengeBenutzername = strlen ( $neuerBenutzername );
 		
 		if (filter_var ( $neueEmail, FILTER_VALIDATE_EMAIL )) {
-			if (isset ( $neuesPasswort ) && strlen($neuesPasswort) > 3 && strlen($neuerBenutzername >= 3)) {
+			if (isset ( $neuesPasswort ) && $laengePasswort > 3 && $laengeBenutzername >= 3) {
 				if ($neuesPasswort === $neuesPasswortWiederholen) {
 					$neuesPasswort = sha1 ( $neuesPasswort );
 					$_SESSION ["passwort"] = $neuesPasswort;
@@ -51,6 +53,17 @@ class UserController {
 					
 					header ( "Location: /" );
 				}
+			} else {
+				
+				$view = new View ( 'meinProfil' );
+				$view->title = 'bearbeitung Fehlgeschlagen';
+				$view->heading = '';
+				$view->tablogin = true;
+				$view->active = 'meinProfil';
+				$view->display ();
+				
+				echo "<script>document.getElementById('bearbeiteWarnung').innerHTML = 'Bitte beachten Sie die genannten Vorschriften.';
+					</script>";
 			}
 		} else {
 			

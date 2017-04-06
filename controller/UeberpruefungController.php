@@ -43,7 +43,10 @@ class UeberpruefungController {
 			$passwortWiederholen = htmlspecialchars ( $_POST ['reenterpassword'] );
 			$computercheck = $_POST ['humancheck'];
 			
-			if ($passwort === $passwortWiederholen && $computercheck == "human" && strlen($benutzername) >= 3 && strlen($passwort) > 5){
+			$laengePasswort = strlen ( $passwort );
+			$laengeBenutzernameme = strlen ( $benutzername );
+			
+			if ($passwort === $passwortWiederholen && $computercheck == "human" && $laengeBenutzernameme >= 3 && $laengePasswort > 5) {
 				$userRepository = new UserRepository ();
 				$userRepository->benutzerErstellen ( $benutzername, $email, $passwort );
 				header ( "Location: /" );

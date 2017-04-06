@@ -6,7 +6,7 @@
 		<div class="form-group">
 			<label class="col-lg-3 control-label">Email:</label>
 			<div class="col-lg-8">
-				<input class="form-control" id="accountBearbeitenEmail"
+				<input class="form-control" id="email"
 					name="accountBearbeitenEmail" type="text" onkeyup="ueberpruefung()"
 					value="<?php echo $_SESSION['email'];?>">
 			</div>
@@ -15,7 +15,7 @@
 			<label class="col-md-3 control-label">Benutzername:</label>
 			<div class="col-md-8">
 				<input class="form-control" type="text"
-					id="accountBearbeitenBenutzername"
+					id="benutzername"
 					name="accountBearbeitenBenutzername" onkeyup="ueberpruefung()"
 					value="<?php echo $_SESSION['benutzername'];?>">
 			</div>
@@ -24,7 +24,8 @@
 			<label class="col-md-3 control-label">neues Password:</label>
 			<div class="col-md-8">
 				<input class="form-control" name="accountBearbeitenPasswort"
-					id="accountBearbeitenPasswort" onchange="ueberpruefung"
+					value=<?php $_SESSION['passwort']?>
+					id="password" onkeyup="ueberpruefung()"
 					type="password">
 			</div>
 		</div>
@@ -32,13 +33,13 @@
 			<label class="col-md-3 control-label">neues Passwort Wiederholen:</label>
 			<div class="col-md-8">
 				<input class="form-control"
-					id="accountBearbeitenPasswortWiederholen" type="password"
+					id="reenterpassword" type="password"
 					onkeyup="ueberpruefung()"
 					name="accountBearbeitenPasswortWiederholen">
 			</div>
 		</div>
 		<div id="bearbeiteWarnung"></div>
-		<div style="color: red; text-align: center;" id="warnung"></div>
+		<div div class="alert alert-warning" role="alert" style="text-align: center" id="warnung"></div>
 		<div class="form-group">
 			<label class="col-md-3 control-label"></label>
 			<div class="col-md-8">
