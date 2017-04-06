@@ -1,4 +1,4 @@
-bn<?php
+<?php
 require '../repository/UserRepository.php';
 require '../repository/ChatRepository.php';
 require '../woerterConfig.php';
