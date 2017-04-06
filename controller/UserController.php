@@ -1,6 +1,7 @@
 <?php
 require_once '../repository/UserRepository.php';
 require_once '../repository/LoginResult.php';
+require_once '../controller/LogoutController.php';
 class UserController {
 	public function meinProfil() {
 		$view = new View ( 'meinProfil' );
@@ -81,6 +82,7 @@ class UserController {
 	public function profilLoeschen() {
 		$userRepository = new UserRepository ();
 		$userRepository->deleteById ( $_SESSION ['id'] );
-		header ( 'Location: /' );
+		$logout = new LogoutController ();
+		$logout->logout ();
 	}
 }

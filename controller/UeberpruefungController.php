@@ -46,12 +46,6 @@ class UeberpruefungController {
 			$laengePasswort = strlen ( $passwort );
 			$laengeBenutzernameme = strlen ( $benutzername );
 			
-			$userRepository = new UserRepository();
-			$userRepository->existiertNutzer($email, $passwort);
-			
-			$loginResult = new LoginResult();
-			$benutzerExistiert = $loginResult->getBuntzerExistiert();
-			
 			if ($passwort === $passwortWiederholen && $computercheck == "human" && $laengeBenutzernameme >= 3 && $laengePasswort > 5) {
 				$userRepository = new UserRepository ();
 				$userRepository->benutzerErstellen ( $benutzername, $email, $passwort );
